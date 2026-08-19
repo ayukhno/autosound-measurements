@@ -1,0 +1,494 @@
+{
+  "_about": "Two DSP states of the same car, output layer of the Helix DSP Ultra S (delays in ms, positive = channel plays later; polarity; crossovers; gains; PEQ; all-pass), for scoring an algorithm against a real end point. Filters are Helix families: LR = Linkwitz-Riley, BW = Butterworth, slope in dB/oct; PEQ Q is RBJ; LS/HS are the Helix LS_Q/HS_Q shelves (RBJ shelf, S = 1 at Q 0.71).",
+  "sample_rate": 96000,
+  "junction_fc_hz_acoustic_plan": [
+    70,
+    320,
+    3500
+  ],
+  "protective_hpf_during_measurement": {
+    "m_L": {
+      "family": "LR",
+      "hz": 100,
+      "slope": 24
+    },
+    "m_R": {
+      "family": "LR",
+      "hz": 100,
+      "slope": 24
+    },
+    "c": {
+      "family": "LR",
+      "hz": 100,
+      "slope": 24
+    },
+    "tw_L": {
+      "family": "LR",
+      "hz": 1000,
+      "slope": 24
+    },
+    "tw_R": {
+      "family": "LR",
+      "hz": 1000,
+      "slope": 24
+    }
+  },
+  "v1_attested_2026-07-12": {
+    "_about": "first attested hardware state, computed from the same _01 measurements and accepted by ear (delays/polarity/crossovers; gains and PEQ of that date are in the audit trail)",
+    "sw": {
+      "hpf": null,
+      "lpf": {
+        "family": "BW",
+        "hz": 88,
+        "slope": 36
+      },
+      "delay_ms": 0.0,
+      "inverted": false
+    },
+    "w_L": {
+      "hpf": {
+        "family": "LR",
+        "hz": 86,
+        "slope": 12
+      },
+      "lpf": {
+        "family": "LR",
+        "hz": 215,
+        "slope": 12
+      },
+      "delay_ms": 3.69,
+      "inverted": false
+    },
+    "w_R": {
+      "hpf": {
+        "family": "LR",
+        "hz": 86,
+        "slope": 12
+      },
+      "lpf": {
+        "family": "LR",
+        "hz": 215,
+        "slope": 12
+      },
+      "delay_ms": 3.69,
+      "inverted": false
+    },
+    "m_L": {
+      "hpf": {
+        "family": "BW",
+        "hz": 460,
+        "slope": 24
+      },
+      "lpf": {
+        "family": "LR",
+        "hz": 2000,
+        "slope": 12
+      },
+      "delay_ms": 3.12,
+      "inverted": true
+    },
+    "m_R": {
+      "hpf": {
+        "family": "BW",
+        "hz": 460,
+        "slope": 24
+      },
+      "lpf": {
+        "family": "LR",
+        "hz": 2000,
+        "slope": 12
+      },
+      "delay_ms": 2.71,
+      "inverted": true
+    },
+    "tw_L": {
+      "hpf": {
+        "family": "BW",
+        "hz": 3625,
+        "slope": 24
+      },
+      "lpf": null,
+      "delay_ms": 2.27,
+      "inverted": true
+    },
+    "tw_R": {
+      "hpf": {
+        "family": "BW",
+        "hz": 3625,
+        "slope": 24
+      },
+      "lpf": null,
+      "delay_ms": 1.44,
+      "inverted": true
+    }
+  },
+  "current_SQ_v10_7_2026-08-18": {
+    "_source": "PC-Tool screenshots 2026-08-18, preset SQ-CRv3 Aug15 v.10.7 (10.8 identical per owner), OUTPUT layer only; virtual-channel delays/gains, EQ banks (incl. AP2 all-passes) and center (Output B) NOT yet captured; AP2 on tw_L/tw_R from EQ-bank screenshots 2026-08-18 (band 4, 2nd order, invert off, bypass off); center (Output B) and 'virtual layer = defaults (no delay/gain/polarity)' confirmed by owner 2026-08-18; PEQ banks still not captured",
+    "sw": {
+      "hpf": null,
+      "lpf": {
+        "family": "BW",
+        "hz": 88,
+        "slope": 36
+      },
+      "delay_ms": 0.0,
+      "inverted": false,
+      "gain_db": 0.0,
+      "peq": [
+        {
+          "type": "PK",
+          "hz": 55,
+          "gain_db": 1.9,
+          "q": 5
+        },
+        {
+          "type": "LS",
+          "hz": 30,
+          "gain_db": -2.2,
+          "q": 0.71
+        },
+        {
+          "type": "LS",
+          "hz": 150,
+          "gain_db": 2.5,
+          "q": 0.71
+        },
+        {
+          "type": "PK",
+          "hz": 38.7,
+          "gain_db": -2.5,
+          "q": 6.9
+        },
+        {
+          "type": "PK",
+          "hz": 27,
+          "gain_db": 3.0,
+          "q": 4.3
+        }
+      ]
+    },
+    "w_L": {
+      "hpf": {
+        "family": "LR",
+        "hz": 92,
+        "slope": 12
+      },
+      "lpf": {
+        "family": "LR",
+        "hz": 215,
+        "slope": 12
+      },
+      "delay_ms": 4.33,
+      "inverted": false,
+      "gain_db": -0.3,
+      "peq": [
+        {
+          "type": "PK",
+          "hz": 241,
+          "gain_db": -3.0,
+          "q": 5
+        },
+        {
+          "type": "PK",
+          "hz": 188,
+          "gain_db": -2.5,
+          "q": 7
+        },
+        {
+          "type": "PK",
+          "hz": 300,
+          "gain_db": -2.5,
+          "q": 2
+        },
+        {
+          "type": "PK",
+          "hz": 102,
+          "gain_db": -3.0,
+          "q": 3.5
+        }
+      ]
+    },
+    "w_R": {
+      "hpf": {
+        "family": "LR",
+        "hz": 92,
+        "slope": 12
+      },
+      "lpf": {
+        "family": "LR",
+        "hz": 215,
+        "slope": 12
+      },
+      "delay_ms": 3.05,
+      "inverted": false,
+      "gain_db": 0.6,
+      "peq": [
+        {
+          "type": "PK",
+          "hz": 147,
+          "gain_db": -4.1,
+          "q": 3
+        },
+        {
+          "type": "HS",
+          "hz": 195,
+          "gain_db": 3.0,
+          "q": 0.71
+        },
+        {
+          "type": "LS",
+          "hz": 46,
+          "gain_db": -5.4,
+          "q": 0.71
+        },
+        {
+          "type": "PK",
+          "hz": 147,
+          "gain_db": -2.2,
+          "q": 5
+        },
+        {
+          "type": "PK",
+          "hz": 134,
+          "gain_db": -3.0,
+          "q": 5
+        }
+      ]
+    },
+    "m_L": {
+      "hpf": {
+        "family": "BW",
+        "hz": 460,
+        "slope": 24
+      },
+      "lpf": {
+        "family": "LR",
+        "hz": 2000,
+        "slope": 12
+      },
+      "delay_ms": 3.4,
+      "inverted": true,
+      "gain_db": -3.5,
+      "peq": [
+        {
+          "type": "PK",
+          "hz": 2357,
+          "gain_db": -5.4,
+          "q": 3
+        },
+        {
+          "type": "PK",
+          "hz": 1250,
+          "gain_db": 3.0,
+          "q": 1.4
+        },
+        {
+          "type": "PK",
+          "hz": 2357,
+          "gain_db": -2.7,
+          "q": 3
+        },
+        {
+          "type": "PK",
+          "hz": 482,
+          "gain_db": -1.7,
+          "q": 3
+        },
+        {
+          "type": "PK",
+          "hz": 320,
+          "gain_db": -2.5,
+          "q": 2
+        },
+        {
+          "type": "PK",
+          "hz": 520,
+          "gain_db": 1.2,
+          "q": 1.8
+        },
+        {
+          "type": "PK",
+          "hz": 1120,
+          "gain_db": -2.5,
+          "q": 2.2
+        }
+      ]
+    },
+    "m_R": {
+      "hpf": {
+        "family": "BW",
+        "hz": 460,
+        "slope": 24
+      },
+      "lpf": {
+        "family": "LR",
+        "hz": 2000,
+        "slope": 12
+      },
+      "delay_ms": 2.13,
+      "inverted": true,
+      "gain_db": 0.9,
+      "peq": [
+        {
+          "type": "PK",
+          "hz": 434,
+          "gain_db": -2.7,
+          "q": 3
+        },
+        {
+          "type": "PK",
+          "hz": 1250,
+          "gain_db": 2.0,
+          "q": 1.4
+        },
+        {
+          "type": "HS",
+          "hz": 2208,
+          "gain_db": -2.0,
+          "q": 0.71
+        },
+        {
+          "type": "PK",
+          "hz": 520,
+          "gain_db": 1.2,
+          "q": 1.8
+        }
+      ]
+    },
+    "tw_L": {
+      "hpf": {
+        "family": "BW",
+        "hz": 3625,
+        "slope": 24
+      },
+      "lpf": null,
+      "delay_ms": 2.49,
+      "inverted": true,
+      "gain_db": -5.8,
+      "allpass": {
+        "order": 2,
+        "hz": 2600,
+        "q": 1.0
+      },
+      "peq": [
+        {
+          "type": "PK",
+          "hz": 17416,
+          "gain_db": 3.0,
+          "q": 2
+        },
+        {
+          "type": "PK",
+          "hz": 4327,
+          "gain_db": -2.7,
+          "q": 1.4
+        },
+        {
+          "type": "HS",
+          "hz": 12786,
+          "gain_db": 1.4,
+          "q": 0.71
+        },
+        {
+          "type": "PK",
+          "hz": 4050,
+          "gain_db": -2.0,
+          "q": 2
+        },
+        {
+          "type": "PK",
+          "hz": 6800,
+          "gain_db": -1.5,
+          "q": 1.5
+        },
+        {
+          "type": "PK",
+          "hz": 8800,
+          "gain_db": 0.5,
+          "q": 1.4
+        },
+        {
+          "type": "HS",
+          "hz": 7500,
+          "gain_db": -1.0,
+          "q": 0.7
+        }
+      ]
+    },
+    "tw_R": {
+      "hpf": {
+        "family": "BW",
+        "hz": 3625,
+        "slope": 24
+      },
+      "lpf": null,
+      "delay_ms": 1.25,
+      "inverted": true,
+      "gain_db": -4.2,
+      "allpass": {
+        "order": 2,
+        "hz": 4220,
+        "q": 0.63
+      },
+      "peq": [
+        {
+          "type": "PK",
+          "hz": 8682,
+          "gain_db": -0.9,
+          "q": 3
+        },
+        {
+          "type": "PK",
+          "hz": 19000,
+          "gain_db": 1.1,
+          "q": 3
+        },
+        {
+          "type": "PK",
+          "hz": 8800,
+          "gain_db": -1.0,
+          "q": 1.4
+        },
+        {
+          "type": "HS",
+          "hz": 7500,
+          "gain_db": -1.0,
+          "q": 0.7
+        },
+        {
+          "type": "PK",
+          "hz": 10500,
+          "gain_db": -1.0,
+          "q": 1.5
+        }
+      ]
+    },
+    "c": {
+      "hpf": {
+        "family": "LR",
+        "hz": 714,
+        "slope": 24
+      },
+      "lpf": {
+        "family": "LR",
+        "hz": 1897,
+        "slope": 24
+      },
+      "delay_ms": 1.95,
+      "inverted": false,
+      "gain_db": -8.5,
+      "allpass": null
+    },
+    "_virtual_layer": "defaults — no delay, gain or polarity on the virtual channels (owner, 2026-08-18)",
+    "_peq_note": "OUTPUT PEQ banks reconstructed from dsp_state.md and VERIFIED by the owner against PC-Tool 2026-08-18 (sub 27 Q4.3 / 38.7 Q6.9, 55 & 30 kept; tw_L no 4400; tw_R band 3 bypass; w_R 175 bypass). Virtual-layer EQ (LS150/250/1420/2050/3600, L 2800) omitted: common to w/m/tw of a side and mirrored on the sub by LS 150, so it cancels in every junction."
+  },
+  "v2_imaging_delays_ms": {
+    "sw": 0.0,
+    "w_L": 4.33,
+    "w_R": 3.05,
+    "m_L": 3.76,
+    "m_R": 2.07,
+    "tw_L": 2.91,
+    "tw_R": 0.8
+  }
+}

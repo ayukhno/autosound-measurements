@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.json text eol=lf
+*.txt  text eol=lf
+*.md   text eol=lf
+# the impulse-response files are data, not prose: keep them out of diffs and language stats
+cars/**/ir-v7/*.json             -diff linguist-generated
+cars/**/ir-v7-compensated/*.json -diff linguist-generated
+hardware/**/measurements/*.json  -diff linguist-generated
