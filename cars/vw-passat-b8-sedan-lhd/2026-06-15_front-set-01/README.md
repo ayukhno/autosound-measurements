@@ -124,7 +124,7 @@ attested reference, current is where the ear has got to.
 ## Caveats, honestly
 
 - One sweep per channel (no averaging); SNR per REW 34–51 dB.
-- The mic calibration (ECM8000 0°/90° files, [`mics/behringer-ecm8000`](../../../mics/behringer-ecm8000/)) is **not** applied to the IRs; REW's curves carry it.
+- The mic calibration (ECM8000 0°/90° files, [`mics/behringer-ecm8000`](../../../mics/behringer-ecm8000/)) is **not** applied to the IRs; whether REW had it loaded when the RTA/FR curves were computed cannot be established from the session data.
 - The centre channel is a dash driver with its own protective 100 Hz LR24; its "IR start" reads oddly
   after compensation (amplified LF noise) — see above.
 - Rear channels are not on this time base and are omitted.
