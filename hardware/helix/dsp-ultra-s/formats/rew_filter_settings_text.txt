@@ -1,0 +1,40 @@
+Filter Settings file
+
+Room EQ V5.40 Beta 132
+Dated: Aug 19, 2026, 11:57:04 AM
+
+Notes:
+
+Equaliser: Audiotec Fischer Full EQ (30 bands)
+ALL
+Filter  1: ON  Modal    Fc   120.0 Hz  Gain  -6.00 dB  Q  11.59  T60 target   300 ms
+Filter  2: ON  Modal    Fc    45.0 Hz  Gain  -4.50 dB  Q   9.48  T60 target   600 ms
+Filter  3: ON  PK       Fc   200.0 Hz  Gain   -2.0 dB  Q   4.00
+Filter  4: ON  None   
+Filter  5: ON  None   
+Filter  6: ON  None   
+Filter  7: ON  None   
+Filter  8: ON  None   
+Filter  9: ON  None   
+Filter 10: ON  None   
+Filter 11: ON  None   
+Filter 12: ON  None   
+Filter 13: ON  None   
+Filter 14: ON  None   
+Filter 15: ON  None   
+Filter 16: ON  None   
+Filter 17: ON  None   
+Filter 18: ON  None   
+Filter 19: ON  None   
+Filter 20: ON  None   
+Filter 21: ON  None   
+Filter 22: ON  None   
+Filter 23: ON  None   
+Filter 24: ON  None   
+Filter 25: ON  None   
+Filter 26: ON  None   
+Filter 27: ON  None   
+Filter 28: ON  None   
+Filter 29: ON  None   
+Filter 30: ON  None   
+
