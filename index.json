@@ -1,29 +1,117 @@
 {
-  "schema": 1,
-  "updated": "2026-08-19",
-  "license": "CC-BY-4.0",
-  "datasets": [
-    {
-      "id": "vw-passat-b8-sedan-lhd/2026-06-15_front-set-01",
-      "car": "vw-passat-b8-sedan-lhd",
-      "carDoc": "cars/vw-passat-b8-sedan-lhd/CAR.md",
-      "session": "2026-06-15",
-      "path": "cars/vw-passat-b8-sedan-lhd/2026-06-15_front-set-01",
-      "channels": ["sw", "w_L", "w_R", "m_L", "m_R", "tw_L", "tw_R", "c"],
-      "sampleRate": 96000,
-      "timingReference": "loopback",
-      "formats": ["resonalyze-ir-v7", "resonalyze-ir-v7-compensated", "rta-txt", "dsp-state"],
-      "processor": "Helix DSP Ultra S",
-      "mic": "mics/behringer-ecm8000",
-      "protectiveHighPass": {"m_L": "100:LR:24", "m_R": "100:LR:24", "c": "100:LR:24", "tw_L": "1000:LR:24", "tw_R": "1000:LR:24"},
-      "dspStates": ["v1_attested_2026-07-12", "current_SQ_v10_7_2026-08-18"],
-      "license": "CC-BY-4.0"
-    }
-  ],
-  "hardware": [
-    {"id": "helix/dsp-ultra-s", "vendor": "Audiotec-Fischer", "device": "Helix DSP Ultra S", "path": "hardware/helix/dsp-ultra-s/FACTS.md", "factsVerified": 4, "factsPending": 1}
-  ],
-  "mics": [
-    {"id": "behringer-ecm8000", "path": "mics/behringer-ecm8000", "files": ["ECM8000_0deg.txt", "ECM8000_90deg.txt"], "provenance": "owner-made by substitution against a factory-calibrated UMIK-1"}
-  ]
+ "schema": 1,
+ "updated": "2026-08-20",
+ "license": "CC-BY-4.0",
+ "datasets": [
+  {
+   "id": "vw-passat-b8-sedan-lhd/2026-06-15_front-set-01",
+   "car": "vw-passat-b8-sedan-lhd",
+   "carDoc": "cars/vw-passat-b8-sedan-lhd/CAR.md",
+   "session": "2026-06-15",
+   "path": "cars/vw-passat-b8-sedan-lhd/2026-06-15_front-set-01",
+   "channels": [
+    "sw",
+    "w_L",
+    "w_R",
+    "m_L",
+    "m_R",
+    "tw_L",
+    "tw_R",
+    "c"
+   ],
+   "sampleRate": 96000,
+   "timingReference": "loopback",
+   "formats": [
+    "resonalyze-ir-v7",
+    "resonalyze-ir-v7-compensated",
+    "rta-txt",
+    "dsp-state"
+   ],
+   "processor": "Helix DSP Ultra S",
+   "mic": "mics/behringer-ecm8000",
+   "protectiveHighPass": {
+    "m_L": "100:LR:24",
+    "m_R": "100:LR:24",
+    "c": "100:LR:24",
+    "tw_L": "1000:LR:24",
+    "tw_R": "1000:LR:24"
+   },
+   "dspStates": [
+    "v1_attested_2026-07-12",
+    "current_SQ_v10_7_2026-08-18"
+   ],
+   "license": "CC-BY-4.0"
+  },
+  {
+   "id": "vw-passat-b8-sedan-lhd/2026-08-20_front-set-02",
+   "car": "vw-passat-b8-sedan-lhd",
+   "carDoc": "cars/vw-passat-b8-sedan-lhd/CAR.md",
+   "session": "2026-08-20",
+   "path": "cars/vw-passat-b8-sedan-lhd/2026-08-20_front-set-02",
+   "channels": [
+    "sw",
+    "w_L",
+    "w_R",
+    "m_L",
+    "m_R",
+    "tw_L",
+    "tw_R",
+    "c"
+   ],
+   "extraCaptures": [
+    "m_L-ctl1",
+    "m_L-ctl3",
+    "w_L-nf",
+    "w_R-nf",
+    "w_R-retake"
+   ],
+   "sampleRate": 96000,
+   "timingReference": "loopback",
+   "formats": [
+    "resonalyze-ir-v7",
+    "coherence-txt",
+    "dsp-state"
+   ],
+   "processor": "Helix DSP Ultra S",
+   "mic": "mics/behringer-ecm8000",
+   "micMounting": "tripod at the driver's head position, operator in the passenger seat",
+   "protectiveHighPass": {
+    "m_L": "100:LR:24",
+    "m_R": "100:LR:24",
+    "c": "100:LR:24",
+    "tw_L": "1000:LR:24",
+    "tw_R": "1000:LR:24"
+   },
+   "dspStates": [
+    "cleared_2026-08-20"
+   ],
+   "measuredBy": [
+    "REW 5.40 Beta 132 (published here)",
+    "Resonalyze 4.x (coherence and levels published here)"
+   ],
+   "supersedes": "vw-passat-b8-sedan-lhd/2026-06-15_front-set-01",
+   "license": "CC-BY-4.0"
+  }
+ ],
+ "hardware": [
+  {
+   "id": "helix/dsp-ultra-s",
+   "vendor": "Audiotec-Fischer",
+   "device": "Helix DSP Ultra S",
+   "path": "hardware/helix/dsp-ultra-s/FACTS.md",
+   "factsVerified": 4,
+   "factsPending": 1
+  }
+ ],
+ "mics": [
+  {
+   "id": "behringer-ecm8000",
+   "path": "mics/behringer-ecm8000",
+   "files": [
+    "ECM8000_0deg.txt",
+    "ECM8000_90deg.txt"
+   ],
+   "provenance": "owner-made by substitution against a factory-calibrated UMIK-1"
+  }
+ ]
 }

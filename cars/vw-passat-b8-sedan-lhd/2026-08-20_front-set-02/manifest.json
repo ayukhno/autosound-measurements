@@ -1,0 +1,850 @@
+{
+ "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+ "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+ "createdAtUtc": "2026-08-20T12:29:13+00:00",
+ "rewApi": "http://localhost:4735",
+ "note": "VW Passat B8 sedan (LHD), front set _02 measured 2026-08-20 in the DSP's cleared state (no EQ, no delay, no crossover, channel gains at unity, RTC off) except the protective high-passes: mids/centre 100 Hz LR24, tweeters 1 kHz LR24. Microphone on a tripod at the driver's head position, operator in the passenger seat; Behringer ECM8000 on a Focusrite Scarlett 2i2 4th gen, physical loopback (output R -> input 2). REW 5.40 Beta 132, 512k sweep 20 Hz-20 kHz, 4 sweeps averaged, -9 dBFS, output channel L. The same eight channels were captured in Resonalyze itself minutes earlier (block A).",
+ "timeBase": "transferRealSamples[0] is the loopback reference (t = 0); sweepDeconvolutionRealSamples is REW's buffer as served (t_i = startTimeS + i / sampleRate)",
+ "amplitude": "fraction of full scale (REW percent / 100, normalised=false) \u2014 relative channel levels are meaningful within one set",
+ "files": {
+  "m_L-ctl1": {
+   "rewTitle": "m_L-ctl1",
+   "rewUuid": "1e56dec5-f4d1-4ba7-8ba8-384063df6272",
+   "rewMeasuredAt": "2026-Aug-20 13:50:58",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 2.6216 ms (899 mm, 2 ft 11.4 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.0026216463674760826,
+   "rewTimeOfIrPeakS": 0.0026216463674760826,
+   "rewTimeOfIrStartS": 0.0025625,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 55.074519190060194,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": {
+    "hz": 100.0,
+    "family": "LR",
+    "slopeDbPerOct": 24
+   },
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.997378353758073,
+   "timeZeroIndex": 95748.321960775,
+   "peakDbfs": -36.13341136983793,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "m_L-ctl1.json",
+   "rewId": "11",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 252,
+   "transferPeakTimeS": 0.0026213538323733745,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "w_L": {
+   "rewTitle": "w_L",
+   "rewUuid": "19471173-ac3e-49d3-b820-3bf9f0ab0cc0",
+   "rewMeasuredAt": "2026-Aug-20 13:51:27",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 8.6203 ms (2.957 m, 9 ft 8.4 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.008620344254509638,
+   "rewTimeOfIrPeakS": 0.008620344254509638,
+   "rewTimeOfIrStartS": 0.0033541666666666668,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 44.30042685572181,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": null,
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.9913796570224003,
+   "timeZeroIndex": 95172.44707415042,
+   "peakDbfs": -53.944459556700764,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "w_L.json",
+   "rewId": "12",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 828,
+   "transferPeakTimeS": 0.008620500613894173,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "w_R": {
+   "rewTitle": "w_R",
+   "rewUuid": "71100ea6-b320-4aa6-9059-243ebcb43618",
+   "rewMeasuredAt": "2026-Aug-20 13:51:57",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 6.3914 ms (2.192 m, 7 ft 2.3 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.006391431908259526,
+   "rewTimeOfIrPeakS": 0.006391431908259526,
+   "rewTimeOfIrStartS": 0.004572916666666666,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 44.009725807494966,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": null,
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.9936085727485283,
+   "timeZeroIndex": 95386.42298385872,
+   "peakDbfs": -54.29165394725837,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "w_R.json",
+   "rewId": "13",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 614,
+   "transferPeakTimeS": 0.006391518268539438,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "m_L": {
+   "rewTitle": "m_L",
+   "rewUuid": "7c051441-c090-42e7-abd7-9e8a209878b8",
+   "rewMeasuredAt": "2026-Aug-20 13:52:29",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 2.6186 ms (898 mm, 2 ft 11.36 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.0026186122434371795,
+   "rewTimeOfIrPeakS": 0.0026186122434371795,
+   "rewTimeOfIrStartS": 0.0025520833333333333,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 55.3358834492007,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": {
+    "hz": 100.0,
+    "family": "LR",
+    "slopeDbPerOct": 24
+   },
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.9973813823936659,
+   "timeZeroIndex": 95748.61270979192,
+   "peakDbfs": -36.13311946563103,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "m_L.json",
+   "rewId": "14",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 251,
+   "transferPeakTimeS": 0.002618171761561145,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "m_R": {
+   "rewTitle": "m_R",
+   "rewUuid": "e772dcc0-f68c-43b6-9adf-6eb63216b76c",
+   "rewMeasuredAt": "2026-Aug-20 13:52:59",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 3.9828 ms (1.366 m, 4 ft 5.8 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.003982812667870261,
+   "rewTimeOfIrPeakS": 0.003982812667870261,
+   "rewTimeOfIrStartS": 0.003927083333333333,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 54.171046082501924,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": {
+    "hz": 100.0,
+    "family": "LR",
+    "slopeDbPerOct": 24
+   },
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.9960171810802756,
+   "timeZeroIndex": 95617.64938370646,
+   "peakDbfs": -35.24322537477363,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "m_R.json",
+   "rewId": "15",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 382,
+   "transferPeakTimeS": 0.00398201624779592,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "tw_L": {
+   "rewTitle": "tw_L",
+   "rewUuid": "1232565d-da94-4e58-ba76-1b1f9c2a8d99",
+   "rewMeasuredAt": "2026-Aug-20 13:53:31",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 2.6828 ms (920 mm, 3 ft 0.23 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.0026828142826987866,
+   "rewTimeOfIrPeakS": 0.0026828142826987866,
+   "rewTimeOfIrStartS": 0.0026145833333333333,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 51.57588578336092,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": {
+    "hz": 1000.0,
+    "family": "LR",
+    "slopeDbPerOct": 24
+   },
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.9973171855731751,
+   "timeZeroIndex": 95742.44981502481,
+   "peakDbfs": -38.42355069888222,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "tw_L.json",
+   "rewId": "16",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 258,
+   "transferPeakTimeS": 0.0026833472366138977,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "tw_R": {
+   "rewTitle": "tw_R",
+   "rewUuid": "c20925d7-6d65-4ba3-b4bb-a898d75fd858",
+   "rewMeasuredAt": "2026-Aug-20 13:54:01",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 4.0094 ms (1.375 m, 4 ft 6.1 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.0040094449316028236,
+   "rewTimeOfIrPeakS": 0.0040094449316028236,
+   "rewTimeOfIrStartS": 0.003947916666666666,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 50.971519350989205,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": {
+    "hz": 1000.0,
+    "family": "LR",
+    "slopeDbPerOct": 24
+   },
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.9959905553615578,
+   "timeZeroIndex": 95615.09331470955,
+   "peakDbfs": -38.9974164274968,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "tw_R.json",
+   "rewId": "17",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 385,
+   "transferPeakTimeS": 0.004010209881542869,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "sw": {
+   "rewTitle": "sw",
+   "rewUuid": "84527b75-7caa-4c97-a60f-55ee184bdca4",
+   "rewMeasuredAt": "2026-Aug-20 13:54:31",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 16.2144 ms (5.562 m, 18 ft 3 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.016214396908884154,
+   "rewTimeOfIrPeakS": 0.016214396908884154,
+   "rewTimeOfIrStartS": 0.00659375,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 33.11349929203194,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": null,
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.983788876055131,
+   "timeZeroIndex": 94443.73210129258,
+   "peakDbfs": -76.40864284378256,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "sw.json",
+   "rewId": "18",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 1556,
+   "transferPeakTimeS": 0.01621233240388547,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "c": {
+   "rewTitle": "c",
+   "rewUuid": "7a75a56c-ef9b-449d-aad7-af0093b9de46",
+   "rewMeasuredAt": "2026-Aug-20 13:55:03",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 3.8245 ms (1.312 m, 4 ft 3.6 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.003824494725777061,
+   "rewTimeOfIrPeakS": 0.003824494725777061,
+   "rewTimeOfIrStartS": 0.0033541666666666668,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 50.107800680705864,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": {
+    "hz": 100.0,
+    "family": "LR",
+    "slopeDbPerOct": 24
+   },
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.9961755060148045,
+   "timeZeroIndex": 95632.84857742123,
+   "peakDbfs": -42.77123192348513,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "c.json",
+   "rewId": "19",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 367,
+   "transferPeakTimeS": 0.0038242197644657696,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "m_L-ctl3": {
+   "rewTitle": "m_L-ctl3",
+   "rewUuid": "9b158c7b-68b5-4733-a703-4a08143bb598",
+   "rewMeasuredAt": "2026-Aug-20 13:55:35",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 2.6150 ms (897 mm, 2 ft 11.31 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.0026150254499327508,
+   "rewTimeOfIrPeakS": 0.0026150254499327508,
+   "rewTimeOfIrStartS": 0.0025520833333333333,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 55.52048762589027,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": {
+    "hz": 100.0,
+    "family": "LR",
+    "slopeDbPerOct": 24
+   },
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.997384971928951,
+   "timeZeroIndex": 95748.9573051793,
+   "peakDbfs": -36.201082078529616,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "m_L-ctl3.json",
+   "rewId": "20",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 251,
+   "transferPeakTimeS": 0.002614418841138099,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "w_L-nf": {
+   "rewTitle": "w_L-nf",
+   "rewUuid": "5cae46e4-0a99-46ba-a212-f22e32ba672f",
+   "rewMeasuredAt": "2026-Aug-20 14:19:35",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 0.8458 ms (290 mm, 11.42 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.0008458077192209368,
+   "rewTimeOfIrPeakS": 0.0008458077192209368,
+   "rewTimeOfIrStartS": 0.0007291666666666666,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 54.978262301169316,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": null,
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.999154197461482,
+   "timeZeroIndex": 95918.80295630227,
+   "peakDbfs": -34.63383614168371,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "w_L-nf.json",
+   "rewId": "23",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 81,
+   "transferPeakTimeS": 0.0008462815292600824,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "w_R-nf": {
+   "rewTitle": "w_R-nf",
+   "rewUuid": "8258958a-bd48-41aa-b961-3453d066b9a2",
+   "rewMeasuredAt": "2026-Aug-20 14:20:16",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 0.8388 ms (288 mm, 11.33 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.0008387870956645394,
+   "rewTimeOfIrPeakS": 0.0008387870956645394,
+   "rewTimeOfIrStartS": 0.0007395833333333333,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 57.07373417901718,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": null,
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.9991612127647937,
+   "timeZeroIndex": 95919.4764254202,
+   "peakDbfs": -30.428848997266734,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "w_R-nf.json",
+   "rewId": "24",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 81,
+   "transferPeakTimeS": 0.0008387633485638424,
+   "sweepDeconvolutionPeakIndex": 96000
+  },
+  "w_R-retake": {
+   "rewTitle": "w_R-retake",
+   "rewUuid": "e48c1266-6d14-40bf-bd19-45c8da8b51be",
+   "rewMeasuredAt": "2026-Aug-20 14:07:45",
+   "rewVersion": "V5.40 beta 132",
+   "rewNotes": "DELAY 4.7944 ms (1.644 m, 5 ft 4.7 in)\nrelative to Loopback from Scarlett 2i2 4th Gen  R to Scarlett 2i2 4th Gen  2\nwith no timing offset",
+   "rewDelayS": 0.004794392675989356,
+   "rewTimeOfIrPeakS": 0.004794392675989356,
+   "rewTimeOfIrStartS": 0.00459375,
+   "rewTimingReference": "Loopback",
+   "rewTimingOffsetS": 0.0,
+   "rewSignalToNoiseDb": 45.26608053156857,
+   "rewSplOffsetDb": 102.3415355682373,
+   "protectiveHighPass": null,
+   "converter": "autosound-tuning-skill rew_tool/resonalyze_ir.py",
+   "converterVersion": "1.0 (2026-08-19, format v7 as of Resonalyze d11186e)",
+   "startTimeS": -0.9952055932156264,
+   "timeZeroIndex": 95539.73694870014,
+   "peakDbfs": -53.44452507686676,
+   "amplitudeUnit": "fraction of full scale (REW percent / 100, normalised=false)",
+   "sweepDurationInferredFromIrLength": true,
+   "file": "w_R-retake.json",
+   "rewId": "21",
+   "sampleRate": 96000,
+   "samples": 262144,
+   "transferPeakIndex": 460,
+   "transferPeakTimeS": 0.0047936556536784655,
+   "sweepDeconvolutionPeakIndex": 96000
+  }
+ },
+ "blockA_resonalyze": {
+  "what": "the same eight channels captured in Resonalyze 4.x itself, minutes before this block, with the microphone, the interface gain and the DSP state untouched between the two",
+  "files": "not in this repository (each is ~95 MB); coherence and capture levels extracted here, the originals are offered as a release asset",
+  "sweep": "Resonalyze exponential sweep, 520 ms/octave (5.6715 s), 20 Hz-20 kHz requested (14.7-28130 Hz achieved), 4 runs averaged, playback amplitude 0.5 (-9.03 dBFS RMS)",
+  "coherence": "coherence/<channel>.txt \u2014 1/48-octave band means of Resonalyze transfer coherence",
+  "channels": {
+   "m_L-ctl1": {
+    "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-34-48_m_L-ctl1.json",
+    "savedAtUtc": "2026-08-20T10:34:50.7274475+00:00",
+    "transferPeakIndex": 251,
+    "transferPeakMs": 2.6146,
+    "transferPeakDbFs": -10.84,
+    "acceptedRuns": "4/4",
+    "microphoneLevels": {
+     "peakDbFs": -7.307843684822771,
+     "rmsDbFs": -22.36661774688092,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "loopbackLevels": {
+     "peakDbFs": -20.25711736359434,
+     "rmsDbFs": -26.5497812245516,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "samples": 2097152,
+    "sweepDurationSeconds": 5.67151,
+    "achievedBandHz": [
+     14.66,
+     28130.16
+    ],
+    "coherence20to200": 0.5442,
+    "coherence200to2k": 0.999,
+    "coherence2kto16k": 0.973
+   },
+   "w_L": {
+    "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-35-42_w_L.json",
+    "savedAtUtc": "2026-08-20T10:35:43.741362+00:00",
+    "transferPeakIndex": 827,
+    "transferPeakMs": 8.6146,
+    "transferPeakDbFs": -28.06,
+    "acceptedRuns": "4/4",
+    "microphoneLevels": {
+     "peakDbFs": -10.270107965409474,
+     "rmsDbFs": -24.04388399206201,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "loopbackLevels": {
+     "peakDbFs": -22.548043699501843,
+     "rmsDbFs": -26.545480316207342,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "samples": 2097152,
+    "sweepDurationSeconds": 5.67151,
+    "achievedBandHz": [
+     14.66,
+     28130.16
+    ],
+    "coherence20to200": 0.9967,
+    "coherence200to2k": 0.9998,
+    "coherence2kto16k": 0.9695
+   },
+   "w_R": {
+    "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-36-32_w_R.json",
+    "savedAtUtc": "2026-08-20T10:36:35.3580367+00:00",
+    "transferPeakIndex": 460,
+    "transferPeakMs": 4.7917,
+    "transferPeakDbFs": -28.22,
+    "acceptedRuns": "4/4",
+    "microphoneLevels": {
+     "peakDbFs": -11.996661948555836,
+     "rmsDbFs": -23.920252304413964,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "loopbackLevels": {
+     "peakDbFs": -22.548363046186136,
+     "rmsDbFs": -26.545582906344258,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "samples": 2097152,
+    "sweepDurationSeconds": 5.67151,
+    "achievedBandHz": [
+     14.66,
+     28130.16
+    ],
+    "coherence20to200": 0.9993,
+    "coherence200to2k": 0.9931,
+    "coherence2kto16k": 0.9522
+   },
+   "m_L-ctl2": {
+    "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-37-26_m_L-ctl2.json",
+    "savedAtUtc": "2026-08-20T10:37:27.9226835+00:00",
+    "transferPeakIndex": 251,
+    "transferPeakMs": 2.6146,
+    "transferPeakDbFs": -10.72,
+    "acceptedRuns": "4/4",
+    "microphoneLevels": {
+     "peakDbFs": -8.235302325122039,
+     "rmsDbFs": -22.472060983370866,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "loopbackLevels": {
+     "peakDbFs": -20.283180189854374,
+     "rmsDbFs": -26.546486849838274,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "samples": 2097152,
+    "sweepDurationSeconds": 5.67151,
+    "achievedBandHz": [
+     14.66,
+     28130.16
+    ],
+    "coherence20to200": 0.4861,
+    "coherence200to2k": 0.9976,
+    "coherence2kto16k": 0.9747
+   },
+   "m_R": {
+    "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-38-10_m_R.json",
+    "savedAtUtc": "2026-08-20T10:38:11.8863372+00:00",
+    "transferPeakIndex": 382,
+    "transferPeakMs": 3.9792,
+    "transferPeakDbFs": -9.81,
+    "acceptedRuns": "4/4",
+    "microphoneLevels": {
+     "peakDbFs": -8.92194226108238,
+     "rmsDbFs": -24.449505337127448,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "loopbackLevels": {
+     "peakDbFs": -19.01041858494391,
+     "rmsDbFs": -26.546461675206675,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "samples": 2097152,
+    "sweepDurationSeconds": 5.67151,
+    "achievedBandHz": [
+     14.66,
+     28130.16
+    ],
+    "coherence20to200": 0.569,
+    "coherence200to2k": 0.9996,
+    "coherence2kto16k": 0.9794
+   },
+   "tw_L": {
+    "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-39-01_tw_L.json",
+    "savedAtUtc": "2026-08-20T10:39:02.6909373+00:00",
+    "transferPeakIndex": 257,
+    "transferPeakMs": 2.6771,
+    "transferPeakDbFs": -13.28,
+    "acceptedRuns": "4/4",
+    "microphoneLevels": {
+     "peakDbFs": -12.33071312150878,
+     "rmsDbFs": -29.182488069842492,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "loopbackLevels": {
+     "peakDbFs": -22.54955722913131,
+     "rmsDbFs": -26.546840703161088,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "samples": 2097152,
+    "sweepDurationSeconds": 5.67151,
+    "achievedBandHz": [
+     14.66,
+     28130.16
+    ],
+    "coherence20to200": 0.1043,
+    "coherence200to2k": 0.7122,
+    "coherence2kto16k": 0.9887
+   },
+   "tw_R": {
+    "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-39-50_tw_R.json",
+    "savedAtUtc": "2026-08-20T10:39:52.5144128+00:00",
+    "transferPeakIndex": 385,
+    "transferPeakMs": 4.0104,
+    "transferPeakDbFs": -14.63,
+    "acceptedRuns": "4/4",
+    "microphoneLevels": {
+     "peakDbFs": -14.223611151362004,
+     "rmsDbFs": -30.549357049890933,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "loopbackLevels": {
+     "peakDbFs": -17.118072494830823,
+     "rmsDbFs": -26.54324233066327,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "samples": 2097152,
+    "sweepDurationSeconds": 5.67151,
+    "achievedBandHz": [
+     14.66,
+     28130.16
+    ],
+    "coherence20to200": 0.0904,
+    "coherence200to2k": 0.6603,
+    "coherence2kto16k": 0.9878
+   },
+   "sw": {
+    "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-40-42_sw.json",
+    "savedAtUtc": "2026-08-20T10:40:43.7495062+00:00",
+    "transferPeakIndex": 1567,
+    "transferPeakMs": 16.3229,
+    "transferPeakDbFs": -51.49,
+    "acceptedRuns": "4/4",
+    "microphoneLevels": {
+     "peakDbFs": -9.868751632608237,
+     "rmsDbFs": -25.244551932614634,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "loopbackLevels": {
+     "peakDbFs": -21.998642057753457,
+     "rmsDbFs": -26.547075201411804,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "samples": 2097152,
+    "sweepDurationSeconds": 5.67151,
+    "achievedBandHz": [
+     14.66,
+     28130.16
+    ],
+    "coherence20to200": 0.9968,
+    "coherence200to2k": 0.6914,
+    "coherence2kto16k": 0.106
+   },
+   "c": {
+    "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-41-28_c.json",
+    "savedAtUtc": "2026-08-20T10:41:29.3812985+00:00",
+    "transferPeakIndex": 404,
+    "transferPeakMs": 4.2083,
+    "transferPeakDbFs": -17.84,
+    "acceptedRuns": "4/4",
+    "microphoneLevels": {
+     "peakDbFs": -10.983347455845092,
+     "rmsDbFs": -25.80700291460985,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "loopbackLevels": {
+     "peakDbFs": -16.795515114171128,
+     "rmsDbFs": -26.543651242659525,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "samples": 2097152,
+    "sweepDurationSeconds": 5.67151,
+    "achievedBandHz": [
+     14.66,
+     28130.16
+    ],
+    "coherence20to200": 0.4705,
+    "coherence200to2k": 0.9995,
+    "coherence2kto16k": 0.9737
+   },
+   "m_L-ctl3": {
+    "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-42-13_m_L-ctl3.json",
+    "savedAtUtc": "2026-08-20T10:42:14.7027396+00:00",
+    "transferPeakIndex": 250,
+    "transferPeakMs": 2.6042,
+    "transferPeakDbFs": -10.98,
+    "acceptedRuns": "4/4",
+    "microphoneLevels": {
+     "peakDbFs": -8.687469971714247,
+     "rmsDbFs": -22.55510839941085,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "loopbackLevels": {
+     "peakDbFs": -22.549585002781303,
+     "rmsDbFs": -26.5466302584195,
+     "clipped": false,
+     "fullScaleReference": false
+    },
+    "samples": 2097152,
+    "sweepDurationSeconds": 5.67151,
+    "achievedBandHz": [
+     14.66,
+     28130.16
+    ],
+    "coherence20to200": 0.5447,
+    "coherence200to2k": 0.9998,
+    "coherence2kto16k": 0.9841
+   }
+  }
+ },
+ "drift": {
+  "what": "cabin air temperature moved during each block; the arrival time of a fixed channel tracks it exactly (0.43 samples per degree on a 0.9 m path at 96 kHz)",
+  "measuredBy": "three m_L captures per block (m_L-ctl1 at the start, m_L in its own slot, m_L-ctl3 at the end)",
+  "blockB_REW": {
+   "controls": {
+    "m_L-ctl1": "+0.000 samples at t+0 s",
+    "m_L": "-0.291 at t+91 s",
+    "m_L-ctl3": "-0.636 at t+277 s"
+   },
+   "electronicLatencyMs": 0.4376,
+   "electronicLatencyFrom": "the near-field capture: IR start 0.7292 ms at ~0.10 m, so the non-acoustic part of every arrival is about that much",
+   "perChannel": {
+    "m_L-ctl1": {
+     "measuredAtOffsetSeconds": 0.0,
+     "irStartMs": 2.5625,
+     "acousticPathMs": 2.1249,
+     "driftSamples": -0.0,
+     "note": "add -driftSamples to place this channel on the block-start time base"
+    },
+    "w_L": {
+     "measuredAtOffsetSeconds": 29.0,
+     "irStartMs": 3.3542,
+     "acousticPathMs": 2.9165,
+     "driftSamples": -0.127,
+     "note": "add -driftSamples to place this channel on the block-start time base"
+    },
+    "w_R": {
+     "measuredAtOffsetSeconds": 59.0,
+     "irStartMs": 4.5729,
+     "acousticPathMs": 4.1353,
+     "driftSamples": -0.367,
+     "note": "add -driftSamples to place this channel on the block-start time base"
+    },
+    "m_L": {
+     "measuredAtOffsetSeconds": 91.0,
+     "irStartMs": 2.5521,
+     "acousticPathMs": 2.1145,
+     "driftSamples": -0.29,
+     "note": "add -driftSamples to place this channel on the block-start time base"
+    },
+    "m_R": {
+     "measuredAtOffsetSeconds": 121.0,
+     "irStartMs": 3.9271,
+     "acousticPathMs": 3.4895,
+     "driftSamples": -0.569,
+     "note": "add -driftSamples to place this channel on the block-start time base"
+    },
+    "tw_L": {
+     "measuredAtOffsetSeconds": 153.0,
+     "irStartMs": 2.6146,
+     "acousticPathMs": 2.177,
+     "driftSamples": -0.416,
+     "note": "add -driftSamples to place this channel on the block-start time base"
+    },
+    "tw_R": {
+     "measuredAtOffsetSeconds": 183.0,
+     "irStartMs": 3.9479,
+     "acousticPathMs": 3.5103,
+     "driftSamples": -0.763,
+     "note": "add -driftSamples to place this channel on the block-start time base"
+    },
+    "sw": {
+     "measuredAtOffsetSeconds": 213.0,
+     "irStartMs": 6.5938,
+     "acousticPathMs": 6.1561,
+     "driftSamples": -1.499,
+     "note": "add -driftSamples to place this channel on the block-start time base"
+    },
+    "c": {
+     "measuredAtOffsetSeconds": 245.0,
+     "irStartMs": 3.3542,
+     "acousticPathMs": 2.9165,
+     "driftSamples": -0.791,
+     "note": "add -driftSamples to place this channel on the block-start time base"
+    },
+    "m_L-ctl3": {
+     "measuredAtOffsetSeconds": 277.0,
+     "irStartMs": 2.5521,
+     "acousticPathMs": 2.1145,
+     "driftSamples": -0.633,
+     "note": "add -driftSamples to place this channel on the block-start time base"
+    },
+    "w_R-retake": {
+     "measuredAtOffsetSeconds": 1007.0,
+     "irStartMs": 4.5938,
+     "acousticPathMs": 4.1561,
+     "driftSamples": -3.892,
+     "note": "measured after the last control, so this is an extrapolation of a trend that had no reason to continue \u2014 use it as an order of magnitude, not a correction",
+     "extrapolated": true
+    },
+    "w_L-nf": {
+     "measuredAtOffsetSeconds": 1717.0,
+     "irStartMs": 0.7292,
+     "acousticPathMs": 0.2915,
+     "driftSamples": -0.454,
+     "note": "measured after the last control, so this is an extrapolation of a trend that had no reason to continue \u2014 use it as an order of magnitude, not a correction",
+     "extrapolated": true
+    },
+    "w_R-nf": {
+     "measuredAtOffsetSeconds": 1758.0,
+     "irStartMs": 0.7396,
+     "acousticPathMs": 0.302,
+     "driftSamples": -0.481,
+     "note": "measured after the last control, so this is an extrapolation of a trend that had no reason to continue \u2014 use it as an order of magnitude, not a correction",
+     "extrapolated": true
+    }
+   }
+  },
+  "blockA_Resonalyze": {
+   "controls": {
+    "m_L-ctl1": "+0.000 samples at t+0 s",
+    "m_L-ctl2": "+0.292 at t+158 s",
+    "m_L-ctl3": "+1.087 at t+445 s"
+   },
+   "note": "block A ran while the cabin was still warming after ventilation; block B, forty minutes later, drifted half as much and in the other direction"
+  },
+  "applied": false,
+  "howToApply": "rotate each transfer impulse response by -driftSamples (a fractional, linear-phase shift) to put every channel of a block on the time base of that block's first measurement"
+ },
+ "nearField": {
+  "channels": [
+   "w_L-nf",
+   "w_R-nf"
+  ],
+  "distance": "7 cm from the grille, about 10 cm from the cone",
+  "aim": "on axis, pointed at the driver",
+  "calibration": "ECM8000 0 degree file (for curves; IRs carry none)",
+  "level": "reduced at the interface for the near distance; not level-comparable with the in-car captures",
+  "handHeld": true,
+  "caveat": "held by hand \u2014 acceptable here because the direct sound is 20+ dB above everything else, and both sides were captured the same way; trust it below about 1 kHz"
+ },
+ "levels": {
+  "blockB_REW": "-9 dBFS (RMS), chosen to match Resonalyze exactly",
+  "alsoCaptured": "the same ten channels at 0 dBFS (9 dB louder) are in the REW file as \"<channel> @0dBFS\"; a back-to-back pair on w_R shows the system is linear between the two levels to 0.17 dB RMS",
+  "startFrequency": "the 0 dBFS block swept from 9.89 Hz, this one from 20 Hz"
+ }
+}

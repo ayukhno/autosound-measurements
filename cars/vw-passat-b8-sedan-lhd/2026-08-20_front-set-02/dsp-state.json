@@ -1,0 +1,54 @@
+{
+ "what": "the processor state every channel of this set was measured in: cleared, so that each impulse response is the driver and the cabin and nothing the tune had added",
+ "processor": "Helix DSP Ultra S, 96 kHz native, two processing layers",
+ "preset": "a scratch preset built for the session; the tuned preset (SQ v10.7) was backed up to a file first and restored afterwards",
+ "outputLayer": {
+  "equaliser": "all bands bypassed",
+  "delayMs": {
+   "sw": 0.0,
+   "w_L": 0.0,
+   "w_R": 0.0,
+   "m_L": 0.0,
+   "m_R": 0.0,
+   "tw_L": 0.0,
+   "tw_R": 0.0,
+   "c": 0.0
+  },
+  "gainDb": {
+   "sw": 0.0,
+   "w_L": 0.0,
+   "w_R": 0.0,
+   "m_L": 0.0,
+   "m_R": 0.0,
+   "tw_L": 0.0,
+   "tw_R": 0.0,
+   "c": 0.0
+  },
+  "polarity": {
+   "sw": "normal",
+   "w_L": "normal",
+   "w_R": "normal",
+   "m_L": "normal",
+   "m_R": "normal",
+   "tw_L": "normal",
+   "tw_R": "normal",
+   "c": "normal"
+  },
+  "allPass": "off on every channel",
+  "crossovers": {
+   "sw": "none",
+   "w_L": "none",
+   "w_R": "none",
+   "m_L": "HPF 100 Hz LR24",
+   "m_R": "HPF 100 Hz LR24",
+   "c": "HPF 100 Hz LR24",
+   "tw_L": "HPF 1000 Hz LR24",
+   "tw_R": "HPF 1000 Hz LR24"
+  },
+  "protectiveHighPassNote": "the only filters left in the chain, and they are declared per channel in manifest.json so ProtectiveHighPassCompensation can remove them"
+ },
+ "virtualLayer": "defaults, no equalisation, no level offsets",
+ "rtc": "off \u2014 Helix's Real Time Correction is global and lives outside presets, so switching preset does not disable it; it was verified off before the first sweep",
+ "amplifierSideNote": "the subwoofer amplifier (Audison SR 1.500) has its own phase control in series with the processor's; it was not touched",
+ "whyUnityGain": "the June 2026 set did not record its channel gains, so it cannot be reproduced exactly. Unity is a state that can be stated in one line and repeated at any time, and it makes the level relation between channels the sensitivity of driver and amplifier rather than anyone's tuning decision"
+}

@@ -25,11 +25,27 @@ the ear as the last judge.
 - **Mic:** Behringer ECM8000 with the owner's own 0° / 90° calibration files ([`mics/behringer-ecm8000`](../../mics/behringer-ecm8000/)).
 - **Interface:** Focusrite Scarlett 2i2 4th gen; **physical loopback** (XLR, output R → input 2) as
   REW's timing reference — every sweep on one absolute time base.
-- **Software:** REW 5.40 (beta), API on; the skill's `rew_tool/` for analysis.
+- **Software:** REW 5.40 (beta), API on; the skill's `rew_tool/` for analysis. From the 2026-08-20
+  session onward, Resonalyze is used as a second, independent measurement program on the same rig.
 - Sweeps at the driver's listening position; moving-mic RTA over the listening area, 150 averages.
+
+### Where the microphone is, and who is in the car
+
+Stated because it is half of what a response means, and because it changed between sessions:
+
+- **From 2026-08-20:** microphone on a **tripod**, capsule vertical, at the point the centre of the
+  driver's head occupies in normal seating. The driver's seat and its backrest stay in their normal
+  position and **the operator sits in the passenger seat**, still, through each capture. Calibration:
+  the **90°** (grazing) file for anything at the listening position, the **0°** file for near-field.
+- **Before that, including the 2026-06-15 set:** the microphone was **hand-held** at the same point,
+  the operator in the driver's seat with the seat slid back. Repeat captures measured on 2026-08-20
+  put a number on what that costs — 0.9–2.4 dB RMS between takes 25 s apart and ±2 samples of arrival
+  wander, against 0.2 dB and 0.09 samples on the tripod — so inter-channel timing from the earlier
+  sets carries a few samples of position noise.
 
 ## Sessions
 
 | session | what | notes |
 |---|---|---|
 | [`2026-06-15_front-set-01`](2026-06-15_front-set-01/) | the eight front channels, per-driver loopback sweeps + moving-mic RTA, two DSP states | drivers "clean" except protective HPF (mids/centre 100 Hz LR24, tweeters 1 kHz LR24) |
+| [`2026-08-20_front-set-02`](2026-08-20_front-set-02/) | the eight front channels again, measured **twice** — in Resonalyze and in REW, minutes apart on one microphone position — plus near-field of both door woofers and per-block drift controls | processor cleared and written out (`dsp-state.json`): no EQ, no delay, no crossover, unity gains, RTC off, protective HPFs only. Microphone on a tripod. Supersedes the June set for analysis |

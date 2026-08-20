@@ -1,0 +1,292 @@
+{
+ "m_L-ctl1": {
+  "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-34-48_m_L-ctl1.json",
+  "savedAtUtc": "2026-08-20T10:34:50.7274475+00:00",
+  "transferPeakIndex": 251,
+  "transferPeakMs": 2.6146,
+  "transferPeakDbFs": -10.84,
+  "acceptedRuns": "4/4",
+  "microphoneLevels": {
+   "peakDbFs": -7.307843684822771,
+   "rmsDbFs": -22.36661774688092,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "loopbackLevels": {
+   "peakDbFs": -20.25711736359434,
+   "rmsDbFs": -26.5497812245516,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "samples": 2097152,
+  "sweepDurationSeconds": 5.67151,
+  "achievedBandHz": [
+   14.66,
+   28130.16
+  ],
+  "coherence20to200": 0.5442,
+  "coherence200to2k": 0.999,
+  "coherence2kto16k": 0.973
+ },
+ "w_L": {
+  "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-35-42_w_L.json",
+  "savedAtUtc": "2026-08-20T10:35:43.741362+00:00",
+  "transferPeakIndex": 827,
+  "transferPeakMs": 8.6146,
+  "transferPeakDbFs": -28.06,
+  "acceptedRuns": "4/4",
+  "microphoneLevels": {
+   "peakDbFs": -10.270107965409474,
+   "rmsDbFs": -24.04388399206201,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "loopbackLevels": {
+   "peakDbFs": -22.548043699501843,
+   "rmsDbFs": -26.545480316207342,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "samples": 2097152,
+  "sweepDurationSeconds": 5.67151,
+  "achievedBandHz": [
+   14.66,
+   28130.16
+  ],
+  "coherence20to200": 0.9967,
+  "coherence200to2k": 0.9998,
+  "coherence2kto16k": 0.9695
+ },
+ "w_R": {
+  "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-36-32_w_R.json",
+  "savedAtUtc": "2026-08-20T10:36:35.3580367+00:00",
+  "transferPeakIndex": 460,
+  "transferPeakMs": 4.7917,
+  "transferPeakDbFs": -28.22,
+  "acceptedRuns": "4/4",
+  "microphoneLevels": {
+   "peakDbFs": -11.996661948555836,
+   "rmsDbFs": -23.920252304413964,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "loopbackLevels": {
+   "peakDbFs": -22.548363046186136,
+   "rmsDbFs": -26.545582906344258,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "samples": 2097152,
+  "sweepDurationSeconds": 5.67151,
+  "achievedBandHz": [
+   14.66,
+   28130.16
+  ],
+  "coherence20to200": 0.9993,
+  "coherence200to2k": 0.9931,
+  "coherence2kto16k": 0.9522
+ },
+ "m_L-ctl2": {
+  "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-37-26_m_L-ctl2.json",
+  "savedAtUtc": "2026-08-20T10:37:27.9226835+00:00",
+  "transferPeakIndex": 251,
+  "transferPeakMs": 2.6146,
+  "transferPeakDbFs": -10.72,
+  "acceptedRuns": "4/4",
+  "microphoneLevels": {
+   "peakDbFs": -8.235302325122039,
+   "rmsDbFs": -22.472060983370866,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "loopbackLevels": {
+   "peakDbFs": -20.283180189854374,
+   "rmsDbFs": -26.546486849838274,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "samples": 2097152,
+  "sweepDurationSeconds": 5.67151,
+  "achievedBandHz": [
+   14.66,
+   28130.16
+  ],
+  "coherence20to200": 0.4861,
+  "coherence200to2k": 0.9976,
+  "coherence2kto16k": 0.9747
+ },
+ "m_R": {
+  "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-38-10_m_R.json",
+  "savedAtUtc": "2026-08-20T10:38:11.8863372+00:00",
+  "transferPeakIndex": 382,
+  "transferPeakMs": 3.9792,
+  "transferPeakDbFs": -9.81,
+  "acceptedRuns": "4/4",
+  "microphoneLevels": {
+   "peakDbFs": -8.92194226108238,
+   "rmsDbFs": -24.449505337127448,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "loopbackLevels": {
+   "peakDbFs": -19.01041858494391,
+   "rmsDbFs": -26.546461675206675,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "samples": 2097152,
+  "sweepDurationSeconds": 5.67151,
+  "achievedBandHz": [
+   14.66,
+   28130.16
+  ],
+  "coherence20to200": 0.569,
+  "coherence200to2k": 0.9996,
+  "coherence2kto16k": 0.9794
+ },
+ "tw_L": {
+  "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-39-01_tw_L.json",
+  "savedAtUtc": "2026-08-20T10:39:02.6909373+00:00",
+  "transferPeakIndex": 257,
+  "transferPeakMs": 2.6771,
+  "transferPeakDbFs": -13.28,
+  "acceptedRuns": "4/4",
+  "microphoneLevels": {
+   "peakDbFs": -12.33071312150878,
+   "rmsDbFs": -29.182488069842492,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "loopbackLevels": {
+   "peakDbFs": -22.54955722913131,
+   "rmsDbFs": -26.546840703161088,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "samples": 2097152,
+  "sweepDurationSeconds": 5.67151,
+  "achievedBandHz": [
+   14.66,
+   28130.16
+  ],
+  "coherence20to200": 0.1043,
+  "coherence200to2k": 0.7122,
+  "coherence2kto16k": 0.9887
+ },
+ "tw_R": {
+  "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-39-50_tw_R.json",
+  "savedAtUtc": "2026-08-20T10:39:52.5144128+00:00",
+  "transferPeakIndex": 385,
+  "transferPeakMs": 4.0104,
+  "transferPeakDbFs": -14.63,
+  "acceptedRuns": "4/4",
+  "microphoneLevels": {
+   "peakDbFs": -14.223611151362004,
+   "rmsDbFs": -30.549357049890933,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "loopbackLevels": {
+   "peakDbFs": -17.118072494830823,
+   "rmsDbFs": -26.54324233066327,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "samples": 2097152,
+  "sweepDurationSeconds": 5.67151,
+  "achievedBandHz": [
+   14.66,
+   28130.16
+  ],
+  "coherence20to200": 0.0904,
+  "coherence200to2k": 0.6603,
+  "coherence2kto16k": 0.9878
+ },
+ "sw": {
+  "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-40-42_sw.json",
+  "savedAtUtc": "2026-08-20T10:40:43.7495062+00:00",
+  "transferPeakIndex": 1567,
+  "transferPeakMs": 16.3229,
+  "transferPeakDbFs": -51.49,
+  "acceptedRuns": "4/4",
+  "microphoneLevels": {
+   "peakDbFs": -9.868751632608237,
+   "rmsDbFs": -25.244551932614634,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "loopbackLevels": {
+   "peakDbFs": -21.998642057753457,
+   "rmsDbFs": -26.547075201411804,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "samples": 2097152,
+  "sweepDurationSeconds": 5.67151,
+  "achievedBandHz": [
+   14.66,
+   28130.16
+  ],
+  "coherence20to200": 0.9968,
+  "coherence200to2k": 0.6914,
+  "coherence2kto16k": 0.106
+ },
+ "c": {
+  "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-41-28_c.json",
+  "savedAtUtc": "2026-08-20T10:41:29.3812985+00:00",
+  "transferPeakIndex": 404,
+  "transferPeakMs": 4.2083,
+  "transferPeakDbFs": -17.84,
+  "acceptedRuns": "4/4",
+  "microphoneLevels": {
+   "peakDbFs": -10.983347455845092,
+   "rmsDbFs": -25.80700291460985,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "loopbackLevels": {
+   "peakDbFs": -16.795515114171128,
+   "rmsDbFs": -26.543651242659525,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "samples": 2097152,
+  "sweepDurationSeconds": 5.67151,
+  "achievedBandHz": [
+   14.66,
+   28130.16
+  ],
+  "coherence20to200": 0.4705,
+  "coherence200to2k": 0.9995,
+  "coherence2kto16k": 0.9737
+ },
+ "m_L-ctl3": {
+  "resonalyzeFile": "Resonalyze-IR-2026-08-20_12-42-13_m_L-ctl3.json",
+  "savedAtUtc": "2026-08-20T10:42:14.7027396+00:00",
+  "transferPeakIndex": 250,
+  "transferPeakMs": 2.6042,
+  "transferPeakDbFs": -10.98,
+  "acceptedRuns": "4/4",
+  "microphoneLevels": {
+   "peakDbFs": -8.687469971714247,
+   "rmsDbFs": -22.55510839941085,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "loopbackLevels": {
+   "peakDbFs": -22.549585002781303,
+   "rmsDbFs": -26.5466302584195,
+   "clipped": false,
+   "fullScaleReference": false
+  },
+  "samples": 2097152,
+  "sweepDurationSeconds": 5.67151,
+  "achievedBandHz": [
+   14.66,
+   28130.16
+  ],
+  "coherence20to200": 0.5447,
+  "coherence200to2k": 0.9998,
+  "coherence2kto16k": 0.9841
+ }
+}
