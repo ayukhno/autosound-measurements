@@ -1,5 +1,22 @@
 # Mic-shift capture: which dips a filter can fix, and which it cannot
 
+> ⚠️ **Revision pending (2026-08-20).** Two microphone positions is the minimum this
+> protocol was built on, and it is about to become six. Geddes & Blind (AES 76, 1984,
+> *The Localized Sound Power Method*) established that a single point in a car cabin is
+> not stable enough to equalize from **above the Schroeder frequency**, which Strauß,
+> Treichel & Kessler (DAGA 2010) put at **150–200 Hz** for a car: above it the modal sum
+> is effectively random, sound pressure is Rayleigh-distributed, and a measured value is
+> **much more likely to be too low than too high** — so a deep single-point null above
+> 200 Hz is the expected outcome of sampling, not a fact about the system. The field
+> standard answer is six positions in the ear ellipsoid, averaged, worth about 1/3-octave
+> of reliable resolution.
+>
+> That does not replace the stay-versus-move test — averaging destroys exactly the
+> position dependence this protocol uses as its signal — but six positions give both:
+> the average the literature trusts, and the per-position spread that labels each dip.
+> **Wait for the revision before running this in a car.** Below ~150 Hz the two-point
+> version is still sound.
+
 **What this settles.** A dip in a car's response is one of two things, and they look
 alike on a magnitude plot:
 
