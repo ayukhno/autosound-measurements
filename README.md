@@ -25,6 +25,7 @@ link to the set you used.
 | [`mics/`](mics/) | microphone calibration files as used, with their provenance |
 | [`FORMATS.md`](FORMATS.md) | the file formats used and how to read them (Resonalyze IR JSON v7, RTA text, `dsp-state.json`, `manifest.json`) |
 | [`index.json`](index.json) | a machine-readable catalogue of everything above, for tools |
+| [`protocols/`](protocols/) | capture protocols: what to measure, and why each constraint is there, for sessions meant to answer a question rather than tune a car |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | how to add a cabin or a hardware fact, and what a set must contain |
 | [`tools/check.py`](tools/check.py) | the validator CI runs on every push (formats, manifests, index) |
 
