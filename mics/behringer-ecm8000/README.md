@@ -7,18 +7,13 @@ format (`frequency_Hz<space>dB`), 1/3-octave points.
 position, so sound from the stage reaches it edge-on: everything measured at the listening
 position — sweeps and moving-mic RTA alike — uses the **90°** file. Only **near-field** captures,
 where the microphone is pointed at the driver, use the **0°** file. (An earlier revision of this
-file stated the opposite for sweeps; that was wrong, and the sets are being re-checked against the
-owner's own account of how each group was taken.)
+file stated the opposite for sweeps; that was wrong. The owner confirms the 90°/near-field-0°
+rule held throughout the published sessions.)
 
 The choice only matters at the top: the two files agree to 0.27 dB on average below 1 kHz, and
 diverge above 2 kHz — 3.4 dB at 10 kHz, 5.9 dB at 16 kHz, 7.35 dB at 20 kHz. A curve taken with
 the wrong one of the two is trustworthy in the bass and midrange and wrong by up to 7 dB in the
 last octave.
-
-⚠️ **The June 2026 session:** the owner reports that one group of measurements was captured with
-the other file loaded, noticed at the time in REW. Which group is not yet identified. Impulse
-responses are unaffected either way — REW never writes a calibration into an IR — but the
-`rta-mmm/` curves, which do carry REW's calibration, should be read with that in mind above 2 kHz.
 
 **Provenance:** made by the owner by **substitution against a miniDSP UMIK-1 (serial 7158244) that
 carries its factory calibration** — the UMIK-1 measured first, the ECM8000 in its place, the
