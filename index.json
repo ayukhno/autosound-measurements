@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "updated": "2026-08-20",
+ "updated": "2026-08-24",
  "license": "CC-BY-4.0",
  "datasets": [
   {
@@ -90,6 +90,45 @@
     "Resonalyze 4.x (coherence and levels published here)"
    ],
    "supersedes": "vw-passat-b8-sedan-lhd/2026-06-15_front-set-01",
+   "license": "CC-BY-4.0"
+  },
+  {
+   "id": "vw-passat-b8-sedan-lhd/2026-08-24_mmm-rta-levels",
+   "car": "vw-passat-b8-sedan-lhd",
+   "carDoc": "cars/vw-passat-b8-sedan-lhd/CAR.md",
+   "session": "2026-08-24",
+   "path": "cars/vw-passat-b8-sedan-lhd/2026-08-24_mmm-rta-levels",
+   "kind": "mmm-rta-levels",
+   "channels": [
+    "sw",
+    "w_L",
+    "w_R",
+    "m_L",
+    "m_R",
+    "tw_L",
+    "tw_R"
+   ],
+   "extraCaptures": [
+    "sum_sw_w",
+    "sum_L",
+    "sum_R",
+    "sum_all"
+   ],
+   "sampleRate": 96000,
+   "timingReference": null,
+   "formats": [
+    "rta-txt"
+   ],
+   "processor": "Helix DSP Ultra S",
+   "mic": "mics/behringer-ecm8000",
+   "micMounting": "hand-held, moved through the listening area during the averaging (MMM)",
+   "dspStates": [
+    "resonalyze-plan levels-only 2026-08-23 (not published here)"
+   ],
+   "measuredBy": [
+    "REW 5.40 Beta 132 (published here)"
+   ],
+   "note": "Magnitude only — no phase, no impulse response. Level verification, not timing.",
    "license": "CC-BY-4.0"
   }
  ],

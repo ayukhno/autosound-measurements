@@ -178,9 +178,19 @@ def check_index():
             fail(f"index: dataset path missing {d['path']}")
         if not os.path.exists(os.path.join(ROOT, d.get("carDoc", ""))):
             fail(f"index: carDoc missing for {d['id']}")
+        # A channel is proved by the file its dataset actually declares: an
+        # impulse-response set owes ir-v7/<ch>.json, an RTA-only set owes
+        # rta-mmm/<ch>.txt. A set declaring both owes both.
+        formats = d.get("formats", [])
+        expected = []
+        if "resonalyze-ir-v7" in formats:
+            expected.append(("ir-v7", ".json"))
+        if "rta-txt" in formats:
+            expected.append(("rta-mmm", ".txt"))
         for ch in d.get("channels", []):
-            if not os.path.exists(os.path.join(p, "ir-v7", ch + ".json")):
-                fail(f"index: {d['id']} lists channel {ch} but ir-v7/{ch}.json is missing")
+            for sub, ext in expected:
+                if not os.path.exists(os.path.join(p, sub, ch + ext)):
+                    fail(f"index: {d['id']} lists channel {ch} but {sub}/{ch}{ext} is missing")
         ok(f"dataset {d['id']}")
     for h in idx.get("hardware", []):
         if not os.path.exists(os.path.join(ROOT, h["path"])):
