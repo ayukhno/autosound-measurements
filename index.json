@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "updated": "2026-08-24",
+ "updated": "2026-08-31",
  "license": "CC-BY-4.0",
  "datasets": [
   {
@@ -138,7 +138,7 @@
    "vendor": "Audiotec-Fischer",
    "device": "Helix DSP Ultra S",
    "path": "hardware/helix/dsp-ultra-s/FACTS.md",
-   "factsVerified": 4,
+   "factsVerified": 5,
    "factsPending": 1
   }
  ],

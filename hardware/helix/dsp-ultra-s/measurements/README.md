@@ -8,3 +8,10 @@ A/B pair per fact, named `<fact>-<what>-{before,after}.<ext>`.
   the cabin moved by about 1 dB RMS over the thirteen minutes between the first reference and the
   last, while two references 74 s apart agree to 0.16 dB.
 - **Fact 1 (AP2)** — the fit pair is still queued for a bench session.
+- **Fact 8 (crossover alignment and implementation)** — `fact8-xover-{lr36-1k,bw42-1k,lr36-8k}-{bypass,lp,hp}`,
+  three per filter setting rather than a before/after pair, because a crossover has two legs and both
+  are ratioed against the same unfiltered reference. **Electrical**: no microphone, so there is no
+  cabin and no drift between captures; the whole discipline is that nothing but the filter changed
+  within a set. Take `lp` and `hp` over `bypass` as complex ratios. The bypass file is also the
+  chain's own noise floor — about −50 dB — so nothing deeper than ~1.5 octaves into a stopband is
+  evidence. Phase comes from the impulse response on the loopback's time axis, not from REW's curve.
