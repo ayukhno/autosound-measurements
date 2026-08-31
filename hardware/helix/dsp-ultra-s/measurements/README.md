@@ -15,3 +15,10 @@ A/B pair per fact, named `<fact>-<what>-{before,after}.<ext>`.
   within a set. Take `lp` and `hp` over `bypass` as complex ratios. The bypass file is also the
   chain's own noise floor — about −50 dB — so nothing deeper than ~1.5 octaves into a stopband is
   evidence. Phase comes from the impulse response on the loopback's time axis, not from REW's curve.
+  `fact8-rew-measure-dialog.png` and `fact8-rew-analysis-prefs.png` are REW as it stood for every
+  capture in the set — the sweep, the loopback routing and timing offset, and the impulse-response
+  and frequency-response options that decide what the numbers mean. Two of those options matter to
+  anyone re-deriving these files rather than reading them: **Align IR peak** shifts each buffer and
+  records the shift in `startTime`, and REW **normalises every impulse response to peak = 1**, so
+  levels have to come from the SPL curve and only the phase from the IR. The **1/24 smoothing** shown
+  there is a display default and is not in these files; they are the unsmoothed curve.
