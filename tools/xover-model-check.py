@@ -7,6 +7,9 @@ alignment written two ways, so whichever fits better says how the processor buil
 
     python3 tools/xover-model-check.py                # every set
     python3 tools/xover-model-check.py lr36-8k        # one set
+    python3 tools/xover-model-check.py bw42-1k --orders   # and the neighbouring orders,
+                                                          # to show the fit discriminates
+                                                          # order rather than only scale
 
 Reads only hardware/helix/dsp-ultra-s/measurements/fact8-xover-<set>-{bypass,lp,hp}.txt,
 so it reproduces the published numbers from the published files and nothing else.
@@ -84,7 +87,34 @@ def run(name):
               f"best-fit fc {best:8.1f} Hz ({best / fc - 1:+.2%})")
 
 
-for name in (sys.argv[1:] or SETS):
+def orders(name):
+    """The same fit against neighbouring orders. A measurement that only pinned the corner
+    frequency would fit them nearly as well; one that pins the ORDER separates them."""
+    kind, order, fc = SETS[name]
+    f, LP, HP = legs(name)
+    band = (f > fc / 2.2) & (f < fc * 2.2)
+    mL, mH = band & (db(LP) > -32), band & (db(HP) > -32)
+    print(f"\n=== {name}: order left free ===")
+    for n in range(max(2, order - 2), order + 3):
+        best = None
+        for at in np.geomspace(fc * 0.85, fc * 1.18, 167):
+            lt, ht = analogue(f, at, kind, n)
+            e = np.concatenate([db(LP)[mL] - db(lt)[mL], db(HP)[mH] - db(ht)[mH]])
+            e = e[np.isfinite(e)]
+            r = np.sqrt((e ** 2).mean())
+            if best is None or r < best[1]:
+                best = (at, r)
+        star = "  <-- entered" if n == order else ""
+        print(f"  {kind}{n * (12 if kind == 'LR' else 6):>3}: best fc {best[0]:8.1f} Hz   "
+              f"rms {best[1]:6.3f} dB{star}")
+
+
+args = [a for a in sys.argv[1:] if not a.startswith("--")]
+want_orders = "--orders" in sys.argv[1:]
+
+for name in (args or SETS):
     if name not in SETS:
         sys.exit(f"unknown set {name!r}; have: {', '.join(SETS)}")
     run(name)
+    if want_orders:
+        orders(name)
