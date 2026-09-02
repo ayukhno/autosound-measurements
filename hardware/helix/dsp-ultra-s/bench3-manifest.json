@@ -1,0 +1,701 @@
+{
+  "set": "helix-dsp-ultra-s-bench-2026-09-02",
+  "device": "Audiotec-Fischer Helix DSP Ultra S, output layer, 96 kHz",
+  "rig": "ELECTRICAL loop, no microphone: Scarlett 2i2 out L -> Helix line in, Helix line out -> Scarlett in 1; out R -> in 2 direct as the timing reference, timing offset 0. Everything else in the channel off; no gain, level or routing changed within a set, so the ratio to the set's reference is the filter alone.",
+  "grid": {
+    "spacing": "1/96 octave anchored at 20 Hz",
+    "first_hz": 20.0,
+    "last_hz": 19896.9742,
+    "points": 957
+  },
+  "columns": [
+    "frequency_Hz",
+    "dB",
+    "phase_deg"
+  ],
+  "levels": "REW electrical dB; only ratios within a set carry meaning",
+  "resampling": "REW raw unsmoothed spectrum (linear bins), complex-averaged into each 1/96-octave cell with the measurement's own delay removed before averaging and restored after",
+  "sets": {
+    "phase-ref-lp2000-byp-*": "phase-ref-lp2000-byp-ph0",
+    "phase-ref-lp2000-on-*": "phase-ref-lp2000-on-ph0",
+    "phase-slopeoff-lp2000-*": "phase-slopeoff-lp2000-ph0",
+    "phase-slopeoff-lp5000-*": "phase-slopeoff-lp5000-ph0",
+    "fact1-apf-s3-*": "fact1-apf-s3-bypass",
+    "phase-midhigh-hp500-*": "phase-midhigh-hp500-ph0",
+    "phase-steps-lp5000-byp-*": "phase-steps-lp5000-byp-ph0",
+    "phase-steps-lp5000-on-*": "phase-steps-lp5000-on-ph0",
+    "delay-*": "delay-0",
+    "peq-1k-*": "peq-1k-bypass",
+    "cascade-lr24-*": "level-gain0",
+    "level-*": "level-gain0",
+    "phase-cap-lp5000-byp-*": "phase-cap-lp5000-byp-ph0",
+    "phase-cap-lp5000-on-*": "phase-cap-lp5000-on-ph0",
+    "phase-cap-midhigh-hp500-*": "phase-cap-midhigh-hp500-ph0",
+    "phase-cap-midhigh-hp3000-*": "phase-cap-midhigh-hp3000-ph0"
+  },
+  "files": [
+    {
+      "file": "phase-ref-lp2000-byp-ph0.txt",
+      "rew_id": 42,
+      "rew_title": "d0_phase_0_lp2000_byp",
+      "uuid": "775b3580-5089-45f9-a597-50536688cb2d",
+      "date": "2026-Sep-02 10:30:56",
+      "snr_db": 48.63,
+      "delay_ms": -9.0176,
+      "what": "phase control at 0 - the set's reference; subwoofer channel, HPF 500 and LPF 2000 both configured and BYPASSED",
+      "caveats": []
+    },
+    {
+      "file": "phase-ref-lp2000-byp-ph180.txt",
+      "rew_id": 43,
+      "rew_title": "d1_phase_180_lp2000_byp",
+      "uuid": "f1efa082-de4c-4581-a254-d48ca64fb249",
+      "date": "2026-Sep-02 10:31:17",
+      "snr_db": 48.5,
+      "delay_ms": -9.0193,
+      "what": "phase control at 180 deg, LPF configured 2000 Hz and bypassed",
+      "caveats": []
+    },
+    {
+      "file": "phase-ref-lp2000-byp-ph90.txt",
+      "rew_id": 44,
+      "rew_title": "d2_phase_90_lp2000_byp",
+      "uuid": "13f430a1-0fc7-4598-9d7f-699709b0ceff",
+      "date": "2026-Sep-02 10:31:35",
+      "snr_db": 48.43,
+      "delay_ms": -8.9964,
+      "what": "phase control at 90 deg, LPF configured 2000 Hz and bypassed",
+      "caveats": []
+    },
+    {
+      "file": "phase-ref-lp2000-on-ph0.txt",
+      "rew_id": 45,
+      "rew_title": "e0_phase_0_lp2000_on LR24",
+      "uuid": "b944a0e0-a564-4132-89bb-75eaa4844717",
+      "date": "2026-Sep-02 10:32:49",
+      "snr_db": 36.41,
+      "delay_ms": -8.792,
+      "what": "phase control at 0 - the set's reference; LPF 2000 Hz ACTIVE, LR 24 dB/oct",
+      "caveats": []
+    },
+    {
+      "file": "phase-ref-lp2000-on-ph180.txt",
+      "rew_id": 46,
+      "rew_title": "e1_phase_180_lp2000_on LR24",
+      "uuid": "a0a2c86b-550d-4797-b911-b424e3a3daf7",
+      "date": "2026-Sep-02 10:33:07",
+      "snr_db": 36.4,
+      "delay_ms": -8.5554,
+      "what": "phase control at 180 deg, LPF 2000 Hz active, LR 24 dB/oct",
+      "caveats": []
+    },
+    {
+      "file": "phase-slopeoff-lp2000-ph0.txt",
+      "rew_id": 47,
+      "rew_title": "zh0_phase_0_lp2000_slopeoff",
+      "uuid": "5d752703-122c-401b-954e-4f1cb3fb36c5",
+      "date": "2026-Sep-02 10:34:28",
+      "snr_db": 47.28,
+      "delay_ms": -9.0176,
+      "what": "phase control at 0 - the set's reference; LPF configured 2000 Hz with slope = OFF",
+      "caveats": []
+    },
+    {
+      "file": "phase-slopeoff-lp2000-ph180.txt",
+      "rew_id": 48,
+      "rew_title": "zh1_phase_180_lp2000_slopeoff",
+      "uuid": "ee06b098-2568-4b5c-94ea-ab718baff7a7",
+      "date": "2026-Sep-02 10:34:47",
+      "snr_db": 46.78,
+      "delay_ms": -9.0193,
+      "what": "phase control at 180 deg, LPF configured 2000 Hz with slope = OFF",
+      "caveats": []
+    },
+    {
+      "file": "phase-slopeoff-lp5000-ph0.txt",
+      "rew_id": 49,
+      "rew_title": "zh0_phase_0_lp5000_slopeoff",
+      "uuid": "92fe6b70-6e43-4273-8578-86722432a29b",
+      "date": "2026-Sep-02 10:35:51",
+      "snr_db": 48.1,
+      "delay_ms": -9.0175,
+      "what": "phase control at 0 - the set's reference; LPF configured 5000 Hz with slope = OFF",
+      "caveats": [
+        "The chain level stepped by exactly 1.00 dB PART WAY THROUGH this sweep, so this file is 1 dB low above about 1.2 kHz and correct below it. Phase is unaffected; magnitude ratios against it are not. See README."
+      ]
+    },
+    {
+      "file": "phase-slopeoff-lp5000-ph180.txt",
+      "rew_id": 50,
+      "rew_title": "zh1_phase_180_lp5000_slopeoff",
+      "uuid": "dd5d56da-0e22-4102-8ce4-c5df0e726259",
+      "date": "2026-Sep-02 10:36:08",
+      "snr_db": 47.32,
+      "delay_ms": -8.9981,
+      "what": "phase control at 180 deg, LPF configured 5000 Hz with slope = OFF",
+      "caveats": [
+        "Taken after the 1.00 dB level step described in phase-slopeoff-lp5000-ph0."
+      ]
+    },
+    {
+      "file": "fact1-apf-s3-bypass.txt",
+      "rew_id": 51,
+      "rew_title": "z0_bypass",
+      "uuid": "f717c02f-b3b9-4829-b917-0b87a34302f7",
+      "date": "2026-Sep-02 10:38:50",
+      "snr_db": 45.75,
+      "delay_ms": -9.0175,
+      "what": "no filter - the set's reference",
+      "caveats": []
+    },
+    {
+      "file": "fact1-apf-s3-ap1-1k.txt",
+      "rew_id": 52,
+      "rew_title": "z1_ap1_1k",
+      "uuid": "e2277dce-c953-4a65-a6b7-9d387e1d42c9",
+      "date": "2026-Sep-02 10:39:06",
+      "snr_db": 46.0,
+      "delay_ms": -9.0184,
+      "what": "AP1 all-pass, 1000 Hz",
+      "caveats": []
+    },
+    {
+      "file": "fact1-apf-s3-ap1-250.txt",
+      "rew_id": 53,
+      "rew_title": "z2_ap1_250",
+      "uuid": "c7527e38-1f23-41b9-a62c-7e1bb68dfba4",
+      "date": "2026-Sep-02 10:39:26",
+      "snr_db": 46.14,
+      "delay_ms": -9.0178,
+      "what": "AP1 all-pass, 250 Hz",
+      "caveats": []
+    },
+    {
+      "file": "fact1-apf-s3-ap1-8k.txt",
+      "rew_id": 54,
+      "rew_title": "z3_ap1_8k",
+      "uuid": "aa5243a2-77e8-4aaa-9424-10232951572a",
+      "date": "2026-Sep-02 10:39:47",
+      "snr_db": 47.96,
+      "delay_ms": -8.9989,
+      "what": "AP1 all-pass, 8000 Hz",
+      "caveats": []
+    },
+    {
+      "file": "phase-midhigh-hp500-ph0.txt",
+      "rew_id": 55,
+      "rew_title": "i0_phase_0_hp500_midhigh LR24",
+      "uuid": "a84ac5ca-5b12-4c6d-a1cf-01ea6fda44a9",
+      "date": "2026-Sep-02 10:43:13",
+      "snr_db": 45.61,
+      "delay_ms": -8.9995,
+      "what": "phase control at 0 - the set's reference; channel defined as MID/HIGH in a fully active system, HPF 500 Hz active, LR 24 dB/oct",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-midhigh-hp500-ph180.txt",
+      "rew_id": 56,
+      "rew_title": "i1_phase_180_hp500_midhigh LR24",
+      "uuid": "3a24b937-b805-4454-a612-3ed7e3c09adc",
+      "date": "2026-Sep-02 10:43:35",
+      "snr_db": 45.56,
+      "delay_ms": -8.9999,
+      "what": "phase control at 180 deg, mid/high channel, HPF 500 Hz active",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-midhigh-hp500-ph180-hp-bypass.txt",
+      "rew_id": 57,
+      "rew_title": "i2_phase_180_hp500_midhigh bypass",
+      "uuid": "b50e2dd4-8225-4ef6-ae7b-bff0efe27e1b",
+      "date": "2026-Sep-02 10:43:54",
+      "snr_db": 46.13,
+      "delay_ms": -8.9993,
+      "what": "phase control at 180 deg, mid/high channel, HPF 500 Hz BYPASSED",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-midhigh-hp500-ph180-hp-slopeoff.txt",
+      "rew_id": 58,
+      "rew_title": "i2_phase_180_hp500_midhigh slopoff",
+      "uuid": "65c8c541-7a0c-4144-9a6d-248c2a1f88bb",
+      "date": "2026-Sep-02 10:44:15",
+      "snr_db": 45.52,
+      "delay_ms": -8.9993,
+      "what": "phase control at 180 deg, mid/high channel, HPF 500 Hz with slope = OFF",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-midhigh-hp500-ph180-hp-slopeoff-bypass.txt",
+      "rew_id": 59,
+      "rew_title": "i3_phase_180_hp500_midhigh slopoff+bypass",
+      "uuid": "8cfcb61d-4d6c-4eeb-878e-9e36dfe32630",
+      "date": "2026-Sep-02 10:44:35",
+      "snr_db": 46.0,
+      "delay_ms": -8.9993,
+      "what": "phase control at 180 deg, mid/high channel, HPF 500 Hz with slope = OFF and bypassed",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-steps-lp5000-byp-ph0.txt",
+      "rew_id": 60,
+      "rew_title": "k0_phase_0_lp5000_byp",
+      "uuid": "9e59fd61-4e45-4236-a01a-95587b7e65eb",
+      "date": "2026-Sep-02 10:49:06",
+      "snr_db": 46.77,
+      "delay_ms": -8.9989,
+      "what": "phase control at 0 - the set's reference; subwoofer channel, LPF configured 5000 Hz and bypassed",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-steps-lp5000-byp-ph45.txt",
+      "rew_id": 61,
+      "rew_title": "k1_phase_45_lp5000_byp",
+      "uuid": "febeff5c-7fa5-408d-8ce1-a5a60e66e7bb",
+      "date": "2026-Sep-02 10:49:24",
+      "snr_db": 46.62,
+      "delay_ms": -8.9643,
+      "what": "phase control at 45 deg",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-steps-lp5000-byp-clamped.txt",
+      "rew_id": 62,
+      "rew_title": "k2_phase_5.625_lp5000_byp",
+      "uuid": "9f995c92-c5dd-4477-b851-b4eba213fa45",
+      "date": "2026-Sep-02 10:49:42",
+      "snr_db": 45.9,
+      "delay_ms": -8.9713,
+      "what": "one step up from zero, i.e. the setting the PC-Tool calls 5.625 deg. It measures 29.5 deg: the all-pass corner is capped at 18.0 kHz and this setting cannot be reached at a 5 kHz reference. See README.",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-steps-lp5000-byp-ph354.375.txt",
+      "rew_id": 63,
+      "rew_title": "k3_phase_354.375_lp5000_byp",
+      "uuid": "a3eef031-bc84-43a7-92a2-d6e3498c85af",
+      "date": "2026-Sep-02 10:49:58",
+      "snr_db": 46.18,
+      "delay_ms": -8.9991,
+      "what": "phase control at 354.375 deg, the last step of the range",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-steps-lp5000-on-ph0.txt",
+      "rew_id": 64,
+      "rew_title": "k4_phase_0_lp5000_LR24",
+      "uuid": "6eec8f4e-a3ac-4987-b054-0dac89436353",
+      "date": "2026-Sep-02 10:50:16",
+      "snr_db": 37.78,
+      "delay_ms": -8.8912,
+      "what": "phase control at 0 - the set's reference; LPF 5000 Hz ACTIVE, LR 24 dB/oct",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-steps-lp5000-on-ph180.txt",
+      "rew_id": 65,
+      "rew_title": "k5_phase_5.625_lp5000_LR24",
+      "uuid": "ff3eecc9-64e4-4978-a04c-05dada74f60f",
+      "date": "2026-Sep-02 10:50:36",
+      "snr_db": 38.31,
+      "delay_ms": -8.7968,
+      "what": "phase control at 180 deg, LPF 5000 Hz active",
+      "caveats": [
+        "The REW title on this capture says 5.625 deg. That is a naming slip by the operator: the fit is a Q=1 all-pass with its corner at 4979 Hz, which is the 180 deg setting and nothing else.",
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-steps-lp5000-on-clamped.txt",
+      "rew_id": 66,
+      "rew_title": "k6_phase_5.625_lp5000_LR24",
+      "uuid": "f45b57e3-4958-40d9-9315-0b365c52a0cc",
+      "date": "2026-Sep-02 10:50:54",
+      "snr_db": 37.76,
+      "delay_ms": -8.875,
+      "what": "one step up from zero with the LPF active - the clamped setting again, 29.4 deg",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "phase-steps-lp5000-on-ph354.375.txt",
+      "rew_id": 67,
+      "rew_title": "k7_phase_354.375_lp5000_LR24",
+      "uuid": "a7e7a5b8-2173-4b4d-86b1-c6954f43b8f7",
+      "date": "2026-Sep-02 10:51:11",
+      "snr_db": 37.61,
+      "delay_ms": -8.8973,
+      "what": "phase control at 354.375 deg, LPF 5000 Hz active",
+      "caveats": [
+        "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
+      ]
+    },
+    {
+      "file": "delay-0.txt",
+      "rew_id": 68,
+      "rew_title": "l0_delay_0",
+      "uuid": "92c5149a-d030-4efd-8af2-b0b3eef65c2e",
+      "date": "2026-Sep-02 10:54:29",
+      "snr_db": 45.95,
+      "delay_ms": -9.0175,
+      "what": "channel delay 0 - the set's reference; all filters bypassed, phase 0",
+      "caveats": []
+    },
+    {
+      "file": "delay-0.05ms.txt",
+      "rew_id": 69,
+      "rew_title": "l1_delay_0.05ms",
+      "uuid": "f5d70f0a-e465-4acc-8a5d-703a5255986e",
+      "date": "2026-Sep-02 10:54:51",
+      "snr_db": 46.23,
+      "delay_ms": -8.9655,
+      "what": "channel delay set to 0.05 ms, which is 4.800 samples at 96 kHz",
+      "caveats": []
+    },
+    {
+      "file": "delay-0.32ms.txt",
+      "rew_id": 70,
+      "rew_title": "l2_delay_0.32ms",
+      "uuid": "7ca696aa-5608-46dc-8865-f2f6cda97f95",
+      "date": "2026-Sep-02 10:55:15",
+      "snr_db": 46.26,
+      "delay_ms": -8.6946,
+      "what": "channel delay set to 0.32 ms, which is 30.720 samples at 96 kHz",
+      "caveats": []
+    },
+    {
+      "file": "delay-1.00ms.txt",
+      "rew_id": 71,
+      "rew_title": "l3_delay_1.00ms",
+      "uuid": "73a37d6a-6acd-407d-9aae-fc0255af54ce",
+      "date": "2026-Sep-02 10:55:35",
+      "snr_db": 46.11,
+      "delay_ms": -8.0176,
+      "what": "channel delay set to 1.00 ms, which is exactly 96 samples at 96 kHz",
+      "caveats": []
+    },
+    {
+      "file": "peq-1k-bypass.txt",
+      "rew_id": 72,
+      "rew_title": "m0_bypass NO APF1@8k",
+      "uuid": "0a571f94-fb7a-4bd8-9827-469b849f5957",
+      "date": "2026-Sep-02 11:02:30",
+      "snr_db": 48.94,
+      "delay_ms": -9.0175,
+      "what": "no filter - the set's reference",
+      "caveats": []
+    },
+    {
+      "file": "peq-1k-boost6-q1.txt",
+      "rew_id": 73,
+      "rew_title": "m1_peq_1k_+6db_q1 NO APF1@8k",
+      "uuid": "0b99c603-e282-469a-b408-76a89e2e64fe",
+      "date": "2026-Sep-02 11:02:46",
+      "snr_db": 49.35,
+      "delay_ms": -9.0172,
+      "what": "PEQ, 1000 Hz, +6.0 dB, Q 1",
+      "caveats": []
+    },
+    {
+      "file": "peq-1k-boost6-q4.txt",
+      "rew_id": 74,
+      "rew_title": "m2_peq_1k_+6db_q4 NO APF1@8k",
+      "uuid": "c961f3b6-beb0-4a32-82f8-affafec95d8c",
+      "date": "2026-Sep-02 11:03:04",
+      "snr_db": 48.81,
+      "delay_ms": -9.0175,
+      "what": "PEQ, 1000 Hz, +6.0 dB, Q 4",
+      "caveats": []
+    },
+    {
+      "file": "peq-1k-cut6-q1.txt",
+      "rew_id": 75,
+      "rew_title": "m3_peq_1k_-6db_q1 NO APF1@8k",
+      "uuid": "e4b3f78f-761e-4a6f-a5e3-3a9fbe71264f",
+      "date": "2026-Sep-02 11:03:25",
+      "snr_db": 48.49,
+      "delay_ms": -9.0178,
+      "what": "PEQ, 1000 Hz, -6.0 dB, Q 1",
+      "caveats": []
+    },
+    {
+      "file": "peq-1k-boost12-q1.txt",
+      "rew_id": 76,
+      "rew_title": "m4_peq_1k_+12db_q1 lev=-10dB NO APF1@8k",
+      "uuid": "e39a4ea9-6255-4e14-abea-bb7810955124",
+      "date": "2026-Sep-02 11:04:13",
+      "snr_db": 40.37,
+      "delay_ms": -9.0169,
+      "what": "PEQ, 1000 Hz, +12.0 dB, Q 1",
+      "caveats": [
+        "REW's sweep level was lowered by 10 dB for this capture to keep the +12 dB band out of input overload, so the ratio to this set's reference carries a flat -9.93 dB offset."
+      ]
+    },
+    {
+      "file": "cascade-lr24-bypass-disturbed.txt",
+      "rew_id": 77,
+      "rew_title": "n0_bypass",
+      "uuid": "8a93b40d-5cbc-4a07-a3ba-04b93b1bcc6a",
+      "date": "2026-Sep-02 11:09:02",
+      "snr_db": 45.81,
+      "delay_ms": -9.018,
+      "what": "no filter - intended as the set's reference",
+      "caveats": [
+        "DISTURBED CAPTURE - do not use as a reference. Its bin-to-bin phase step is three times the session norm and every ratio against it is wrong by up to 10 dB. Use level-gain0 (REW #81, the same bypassed state two minutes later) instead."
+      ]
+    },
+    {
+      "file": "cascade-lr24-500-hp.txt",
+      "rew_id": 78,
+      "rew_title": "n1_lr24_500_hp",
+      "uuid": "1d007066-9ca2-4424-a0f6-fd0f671e5395",
+      "date": "2026-Sep-02 11:09:17",
+      "snr_db": 48.65,
+      "delay_ms": -9.0182,
+      "what": "LR 24 dB/oct high-pass at 500 Hz, alone",
+      "caveats": []
+    },
+    {
+      "file": "cascade-lr24-5000-lp.txt",
+      "rew_id": 79,
+      "rew_title": "n2_lr24_5000_lp",
+      "uuid": "53bc6e99-b8f6-41f7-bfef-0bf69049fe19",
+      "date": "2026-Sep-02 11:09:36",
+      "snr_db": 40.64,
+      "delay_ms": -8.928,
+      "what": "LR 24 dB/oct low-pass at 5000 Hz, alone",
+      "caveats": []
+    },
+    {
+      "file": "cascade-lr24-500hp-5000lp.txt",
+      "rew_id": 80,
+      "rew_title": "n3_lr24_500hp_5000lp",
+      "uuid": "10f64732-e02c-4dfa-b10a-57d87567ba07",
+      "date": "2026-Sep-02 11:09:51",
+      "snr_db": 39.92,
+      "delay_ms": -8.9415,
+      "what": "LR 24 dB/oct high-pass at 500 Hz AND low-pass at 5000 Hz together",
+      "caveats": []
+    },
+    {
+      "file": "level-gain0.txt",
+      "rew_id": 81,
+      "rew_title": "o0_gain_0",
+      "uuid": "8da32e11-da66-4307-aef3-89625964b367",
+      "date": "2026-Sep-02 11:11:49",
+      "snr_db": 48.76,
+      "delay_ms": -9.0175,
+      "what": "channel gain 0.0 dB - the set's reference, and the reference the cascade set should use",
+      "caveats": []
+    },
+    {
+      "file": "level-gain0-reupload.txt",
+      "rew_id": 82,
+      "rew_title": "o1_gain_0_reupload",
+      "uuid": "f8defc0f-f2df-4447-b908-1490c3f001c0",
+      "date": "2026-Sep-02 11:12:30",
+      "snr_db": 48.8,
+      "delay_ms": -9.0175,
+      "what": "channel gain 0.0 dB, nothing changed, but the whole set re-uploaded to the processor in between",
+      "caveats": []
+    },
+    {
+      "file": "level-gain-minus6.txt",
+      "rew_id": 83,
+      "rew_title": "o2_gain_-6db",
+      "uuid": "d2a7e1e5-cc76-425a-98a3-f409f391d50f",
+      "date": "2026-Sep-02 11:12:52",
+      "snr_db": 42.75,
+      "delay_ms": -9.0175,
+      "what": "channel gain -6.0 dB",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-lp5000-byp-ph0.txt",
+      "rew_id": 84,
+      "rew_title": "p0_phase_0_lp5000_byp",
+      "uuid": "0a92412e-29c2-42d6-bc7e-adc4025b9b2b",
+      "date": "2026-Sep-02 12:23:49",
+      "snr_db": 46.82,
+      "delay_ms": -9.0212,
+      "what": "phase control at 0 - the set's reference; subwoofer channel, LPF configured 5000 Hz and bypassed",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-lp5000-byp-step1.txt",
+      "rew_id": 85,
+      "rew_title": "p1_step1_lp5000_byp 5.625",
+      "uuid": "56875a02-7b74-417e-aa9e-2e43f4100cad",
+      "date": "2026-Sep-02 12:24:13",
+      "snr_db": 46.82,
+      "delay_ms": -8.9936,
+      "what": "one step up from zero (nominally 5.625 deg)",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-lp5000-byp-step2.txt",
+      "rew_id": 86,
+      "rew_title": "p2_step2_lp5000_byp 11.25",
+      "uuid": "75a9465f-f3ac-469b-a0a0-fa719a9506ab",
+      "date": "2026-Sep-02 12:24:31",
+      "snr_db": 46.85,
+      "delay_ms": -8.9936,
+      "what": "two steps up from zero (nominally 11.25 deg)",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-lp5000-byp-step5.txt",
+      "rew_id": 87,
+      "rew_title": "p3_28.125_lp5000_byp",
+      "uuid": "0e3dde12-d6c4-4e11-9e54-f28e70f787a5",
+      "date": "2026-Sep-02 12:24:59",
+      "snr_db": 46.87,
+      "delay_ms": -8.9936,
+      "what": "five steps up from zero (nominally 28.125 deg)",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-lp5000-on-step5.txt",
+      "rew_id": 88,
+      "rew_title": "p4_28.125_lp5000_LR24",
+      "uuid": "3faaf504-7523-4bfa-9c14-c11a883a2fde",
+      "date": "2026-Sep-02 12:25:23",
+      "snr_db": 38.69,
+      "delay_ms": -8.9155,
+      "what": "five steps up from zero, LPF 5000 Hz active, LR 24 dB/oct",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-lp5000-on-step2.txt",
+      "rew_id": 89,
+      "rew_title": "p5_step2_lp5000_LR24 11.25",
+      "uuid": "b49bb8ce-d63d-44dd-96b5-862883590747",
+      "date": "2026-Sep-02 12:25:42",
+      "snr_db": 38.71,
+      "delay_ms": -8.9154,
+      "what": "two steps up from zero, LPF 5000 Hz active",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-lp5000-on-step1.txt",
+      "rew_id": 90,
+      "rew_title": "p6_step1_lp5000_LR24 5.625",
+      "uuid": "fcb6d348-2c60-4426-aceb-e8106cc310c4",
+      "date": "2026-Sep-02 12:25:59",
+      "snr_db": 38.7,
+      "delay_ms": -8.9155,
+      "what": "one step up from zero, LPF 5000 Hz active",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-lp5000-on-ph0.txt",
+      "rew_id": 91,
+      "rew_title": "p7_0_lp5000_LR24",
+      "uuid": "23985a70-dbc7-4829-8d9a-0df66ef616ab",
+      "date": "2026-Sep-02 12:26:13",
+      "snr_db": 38.67,
+      "delay_ms": -8.9316,
+      "what": "phase control at 0 - the set's reference for the three above; taken LAST, the block was captured in reverse order",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-midhigh-hp500-ph0.txt",
+      "rew_id": 92,
+      "rew_title": "s0_phase_0_hp500_mid",
+      "uuid": "061aa5db-2826-41b5-869b-07e0c1a942e0",
+      "date": "2026-Sep-02 13:50:54",
+      "snr_db": 42.02,
+      "delay_ms": 0.3995,
+      "what": "phase control at 0 - the set's reference; MID/HIGH channel, HPF configured 500 Hz and bypassed",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-midhigh-hp500-step1.txt",
+      "rew_id": 93,
+      "rew_title": "s1_step1_hp500_mid",
+      "uuid": "a603bcfb-1ddc-4981-8174-9b8313efd2cd",
+      "date": "2026-Sep-02 13:51:16",
+      "snr_db": 41.96,
+      "delay_ms": 0.4314,
+      "what": "one step up from zero (nominally 5.625 deg)",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-midhigh-hp500-step2.txt",
+      "rew_id": 94,
+      "rew_title": "s2_step2_hp500_mid",
+      "uuid": "6c5a5f12-024f-4dc1-a838-2d34038f448c",
+      "date": "2026-Sep-02 13:51:34",
+      "snr_db": 42.09,
+      "delay_ms": 0.4164,
+      "what": "two steps up from zero (nominally 11.25 deg)",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-midhigh-hp3000-ph0.txt",
+      "rew_id": 95,
+      "rew_title": "t0_phase_0_hp3000_mid",
+      "uuid": "cc1238f6-214c-4ce9-adf7-5fb1c6cd448c",
+      "date": "2026-Sep-02 13:52:04",
+      "snr_db": 42.16,
+      "delay_ms": 0.3995,
+      "what": "phase control at 0 - the set's reference; mid/high channel, HPF configured 3000 Hz and bypassed",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-midhigh-hp3000-step1.txt",
+      "rew_id": 96,
+      "rew_title": "t1_step1_hp3000_mid",
+      "uuid": "3468f21b-d6f6-4f59-828d-5132e2d590be",
+      "date": "2026-Sep-02 13:52:27",
+      "snr_db": 42.15,
+      "delay_ms": 0.4266,
+      "what": "one step up from zero (nominally 5.625 deg)",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-midhigh-hp3000-step2.txt",
+      "rew_id": 97,
+      "rew_title": "t2_step2_hp3000_mid",
+      "uuid": "fbd32752-894c-4b56-9be3-d2abbefc3460",
+      "date": "2026-Sep-02 13:52:45",
+      "snr_db": 42.27,
+      "delay_ms": 0.4266,
+      "what": "two steps up from zero (nominally 11.25 deg)",
+      "caveats": []
+    },
+    {
+      "file": "phase-cap-midhigh-hp3000-ph180.txt",
+      "rew_id": 98,
+      "rew_title": "t3_phase_180_hp3000_mid",
+      "uuid": "e49f2f3f-81e0-43bd-922f-cfd6cab2524c",
+      "date": "2026-Sep-02 13:53:02",
+      "snr_db": 42.17,
+      "delay_ms": 0.4173,
+      "what": "phase control at 180 deg - the control that shows the reference is the configured high-pass",
+      "caveats": []
+    }
+  ],
+  "note": "kept one level above measurements/ because every .json inside measurements/ must be a Resonalyze IR file (tools/check.py)", "written_by": "research/experiments/code/xover-model-form/export-bench3.py"
+}

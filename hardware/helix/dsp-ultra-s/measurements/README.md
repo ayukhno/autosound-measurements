@@ -48,3 +48,73 @@ points, 20 – 19897 Hz — so the two series can be read by the same code. They
 straight over its API from the unsmoothed raw spectrum, resampled to that grid by complex averaging
 with each measurement's own delay taken out before averaging and restored after, so a cell average
 loses no level to rotation within the cell.
+
+---
+
+## Third bench series, 2026-09-02 — the phase control, and four things measured alongside it
+
+Fifty-seven sweeps in one day, same rig and the same grid as the two series above, exported the
+same way. The set answers two questions Resonalyze's author asked about the HELIX channel **Phase**
+control (issue [DIMOSUS/Resonalyze#88](https://github.com/DIMOSUS/Resonalyze/issues/88)) and
+carries four unrelated results that came cheap while the bench was standing.
+
+Every group has **its own reference capture** and only ratios within a group mean anything.
+`../bench3-manifest.json` lists every file with its REW id, date, SNR, delay and caveats, and names
+the reference each group divides by.
+
+**The phase control** — `phase-ref-*`, `phase-slopeoff-*`, `phase-midhigh-*`, `phase-steps-*`,
+`phase-cap-*`. The control is a second-order all-pass with Q = 1 whose corner the PC-Tool places so
+that the phase equals the setting at the channel's reference crossover; the reference is the
+low-pass on a subwoofer channel and the high-pass otherwise, taken **as entered**, whether that
+filter is active, bypassed or set to `slope = OFF`. The `phase-cap-*` files are the ones that
+matter most to an implementer: **the corner cannot exceed about 18.0 kHz**, so at a high reference
+crossover the low settings all collapse onto that one filter — at 5000 Hz the settings 5.625°,
+11.25° and 28.125° are literally the same measurement, while at 500 Hz the documented 5.625° grid
+works exactly. Audiotec Fischer do not document that ceiling and we cannot say whether it is
+deliberate.
+
+**AP1 at three more frequencies** — `fact1-apf-s3-*`, extending the fact 1 set. The first-order
+all-pass does not sit where it is typed and the error grows with frequency: −0.5 % at 250 Hz,
+−0.7 % at 1 kHz, −4.9 % at 8 kHz, against the −1.6 % at 4 kHz already in `fact1-apf-ap1-4k`. AP2
+lands within 0.05 % on the same rig, which is what makes this a property of the section rather than
+of the measurement.
+
+**Delay quantisation** — `delay-*`. A typed delay is rounded to a whole sample at 96 kHz: 0.05 ms
+(4.800 samples) measures 5.0003, 0.32 ms (30.720) measures 30.9996. Both fractions chosen were
+above the half-sample, so these files do not separate rounding from truncation upward.
+
+**PEQ and cascade** — `peq-1k-*` and `cascade-lr24-*`. A peaking band is textbook RBJ, a cut is the
+exact mirror of a boost, the width does not depend on the gain, and a high-pass and low-pass
+measured separately multiply into the measurement of both engaged to 0.045 dB and 0.30° rms.
+
+**Level** — `level-*`. Re-uploading the whole configuration to the processor changes nothing
+(+0.0001 dB), and a typed −6.0 dB gain measures −5.9998 dB.
+
+### Four defects in this set, and what they do and do not cost
+
+These are in the data. Each one is also flagged in the header of the file it affects.
+
+1. **An AP1 was left engaged at 8 kHz from REW #55 to #67** — the operator set it for
+   `fact1-apf-s3-ap1-8k` and did not switch it off before moving on. It therefore sits in
+   `phase-midhigh-*` and `phase-steps-*` as an extra first-order all-pass with its corner at
+   7611.6 Hz. **It costs nothing**, and that is not an assumption: every affected group's own
+   reference was captured inside the same window, so the stray filter appears identically in
+   numerator and denominator and divides out of every ratio. Where the window ends was measured
+   rather than assumed — `phase-steps-lp5000-byp-ph0` over `fact1-apf-s3-bypass` fits a clean
+   first-order all-pass at 7608.3 Hz (0.146° rms), and `delay-0` over that same file shows it
+   already gone. The affected groups fit as tightly as the clean ones, 0.11–0.29° rms. The general
+   rule this illustrates: on a ratio bench a forgotten all-pass is the most forgiving mistake
+   available, **provided the reference is taken in the same state**. Had the mistake landed
+   between a reference and its captures, the set would have been lost.
+2. **A 1.00 dB level step happened part way through sweep #49**, `phase-slopeoff-lp5000-ph0`. A
+   sweep is a time-frequency map, so that file is 1 dB low above about 1.2 kHz and correct below
+   it. Phase is untouched — the all-pass fit against it is 0.15° rms — but magnitude ratios into
+   that group are not usable without correcting the step.
+3. **`cascade-lr24-bypass-disturbed` is a bad capture.** Its bin-to-bin phase step is three times
+   the session norm and ratios against it are wrong by up to 10 dB. Use `level-gain0`, the same
+   bypassed state two minutes later, as the cascade group's reference; the manifest already names
+   it as such. Comparing a session's reference captures against one another before trusting any of
+   them is what found this.
+4. **`phase-steps-lp5000-on-ph180` was mis-titled in REW** as 5.625°. The fit is unambiguous — a
+   Q = 1 all-pass with its corner at 4979 Hz is the 180° setting. The file name states what was
+   measured; the header records the original title.
