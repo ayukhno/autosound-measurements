@@ -4,10 +4,10 @@
 * reference, timing offset 0. Everything else in the channel off; no gain,
 * level or routing changed within a set, so the ratio to the set's reference
 * is the filter alone.
-* REW V5.40 beta 134 measurement #65 'k5_phase_5.625_lp5000_LR24', 2026-Sep-02 10:50:36, 512k sweep, 1 average, 96 kHz,
+* REW V5.40 beta 134 measurement #65 'k5_phase_180_lp5000_LR24', 2026-Sep-02 10:50:36, 512k sweep, 1 average, 96 kHz,
 * 20 Hz - 20 kHz, loopback timing reference. SNR 38.3 dB, delay -8.7968 ms.
 * Levels are REW's electrical dB (splOffset 120.00); only ratios within a set carry meaning.
-* The REW title on this capture says 5.625 deg. That is a naming slip by the operator: the fit is a Q=1 all-pass with its corner at 4979 Hz, which is the 180 deg setting and nothing else.
+* This capture was titled '5.625 deg' in REW at the time - a naming slip by the operator, since corrected there. The fit is unambiguous: a Q=1 all-pass with its corner at 4979 Hz is the 180 deg setting and nothing else.
 * This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README.
 * frequency_Hz<TAB>dB<TAB>phase_deg - REW's UNSMOOTHED raw spectrum (linear bins) resampled to 1/96 octave by complex averaging within each cell,
 * with the measurement's own delay removed before averaging and restored after, so the cell average carries no rotation loss.

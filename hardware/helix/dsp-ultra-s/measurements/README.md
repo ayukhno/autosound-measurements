@@ -115,6 +115,8 @@ These are in the data. Each one is also flagged in the header of the file it aff
    bypassed state two minutes later, as the cascade group's reference; the manifest already names
    it as such. Comparing a session's reference captures against one another before trusting any of
    them is what found this.
-4. **`phase-steps-lp5000-on-ph180` was mis-titled in REW** as 5.625°. The fit is unambiguous — a
-   Q = 1 all-pass with its corner at 4979 Hz is the 180° setting. The file name states what was
-   measured; the header records the original title.
+4. **`phase-steps-lp5000-on-ph180` was mis-titled in REW** as 5.625°, and the title has since been
+   corrected there. The fit is unambiguous — a Q = 1 all-pass with its corner at 4979 Hz is the
+   180° setting. The file name has always stated what was measured; the header records that the
+   title was wrong at capture, because anyone comparing this set against the session it came from
+   should know which of the two was fixed.

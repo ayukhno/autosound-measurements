@@ -314,14 +314,14 @@
     {
       "file": "phase-steps-lp5000-on-ph180.txt",
       "rew_id": 65,
-      "rew_title": "k5_phase_5.625_lp5000_LR24",
+      "rew_title": "k5_phase_180_lp5000_LR24",
       "uuid": "ff3eecc9-64e4-4978-a04c-05dada74f60f",
       "date": "2026-Sep-02 10:50:36",
       "snr_db": 38.31,
       "delay_ms": -8.7968,
       "what": "phase control at 180 deg, LPF 5000 Hz active",
       "caveats": [
-        "The REW title on this capture says 5.625 deg. That is a naming slip by the operator: the fit is a Q=1 all-pass with its corner at 4979 Hz, which is the 180 deg setting and nothing else.",
+        "This capture was titled '5.625 deg' in REW at the time - a naming slip by the operator, since corrected there. The fit is unambiguous: a Q=1 all-pass with its corner at 4979 Hz is the 180 deg setting and nothing else.",
         "This capture carries an EXTRA first-order all-pass, an AP1 the operator left engaged at 8 kHz (measured corner 7611.6 Hz) from REW #55 to #67. It is present in this set's own reference as well, so it divides out of any ratio taken within the set; see README."
       ]
     },
@@ -697,5 +697,6 @@
       "caveats": []
     }
   ],
-  "note": "kept one level above measurements/ because every .json inside measurements/ must be a Resonalyze IR file (tools/check.py)", "written_by": "research/experiments/code/xover-model-form/export-bench3.py"
+  "note": "kept one level above measurements/ because every .json inside measurements/ must be a Resonalyze IR file (tools/check.py)",
+  "written_by": "research/experiments/code/xover-model-form/export-bench3.py"
 }
