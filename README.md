@@ -41,7 +41,7 @@ link to the set you used.
 
 | device | facts |
 |---|---|
-| [Helix DSP Ultra S](hardware/helix/dsp-ultra-s/FACTS.md) | all-pass and crossover sections are bilinear-transformed DIGITAL biquads, not analogue prototypes; LS_Q/HS_Q shelves are RBJ and the Q you type is the RBJ Q over the 0.3 … 2 the PC-Tool allows; the Bessel prototype is normalised at −3 dB; bell (PK) bands are RBJ peaking, boost mirrors cut; delays of the virtual and the output layer SUM; 30 PEQ bands per channel, gain separate; the PC-Tool "Full EQ (30 bands)" bank sample |
+| [Helix DSP Ultra S](hardware/helix/dsp-ultra-s/FACTS.md) | all-pass and crossover sections are bilinear-transformed DIGITAL biquads, not analogue prototypes; LS_Q/HS_Q shelves are RBJ and the Q you type is the RBJ Q over the 0.3 … 2 the PC-Tool allows; the Bessel prototype is normalised at −3 dB; bell (PK) bands are RBJ peaking and constant-Q, boost mirrors cut; the channel Phase control is a Q=1 all-pass referenced to the crossover as entered, with its corner capped near 18 kHz; delays of the virtual and the output layer SUM and quantise to a whole sample; 30 PEQ bands per channel, gain separate; the PC-Tool "Full EQ (30 bands)" bank sample |
 
 ## How the cabin sets are made
 
