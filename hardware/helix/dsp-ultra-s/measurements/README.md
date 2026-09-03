@@ -110,8 +110,15 @@ These are in the data. Each one is also flagged in the header of the file it aff
    sweep is a time-frequency map, so that file is 1 dB low above about 1.2 kHz and correct below
    it. Phase is untouched — the all-pass fit against it is 0.15° rms — but magnitude ratios into
    that group are not usable without correcting the step.
-3. **`cascade-lr24-bypass-disturbed` is a bad capture.** Its bin-to-bin phase step is three times
-   the session norm and ratios against it are wrong by up to 10 dB. Use `level-gain0`, the same
+3. **`cascade-lr24-bypass-disturbed` is a bad capture**, and ratios against it are wrong by up to
+   10 dB. **In this file the tell is the level**: 27 bins sit more than 5 dB below its own median,
+   with holes at 55, 135 and 315 Hz (102.1, 102.9 and 99.4 dB against 109.45 at 1 kHz, where the
+   session's other references all agree to 0.02 dB). Its time base is off from the other six
+   references as well. (A bin-to-bin phase step three times the session norm shows this up too, but
+   only on REW's raw linear spectrum — after resampling to 1/96 octave every file in the set steps
+   the same, so that test does not work on the files published here. Do not confuse the 347
+   low-frequency dips in `phase-midhigh-hp500-ph0` with a defect: that is its 500 Hz high-pass doing
+   its job.) Use `level-gain0`, the same
    bypassed state two minutes later, as the cascade group's reference; the manifest already names
    it as such. Comparing a session's reference captures against one another before trusting any of
    them is what found this.
