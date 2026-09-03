@@ -127,3 +127,30 @@ These are in the data. Each one is also flagged in the header of the file it aff
    180° setting. The file name has always stated what was measured; the header records that the
    title was wrong at capture, because anyone comparing this set against the session it came from
    should know which of the two was fixed.
+
+---
+
+## The 0/90/180/270° phase series, captured 2026-09-01, published 2026-09-03
+
+`phase-turns-{bypassed,hp500,lp5000}-ph{0,90,180,270}` — twelve sweeps, three blocks of four, each
+block with **its own** `ph0` reference. Same channel throughout: the high-pass configured at 500 Hz
+and the low-pass at 5000 Hz; only which of the two is **enabled** changes between blocks. Listed in
+`../phase-turns-manifest.json`.
+
+These sat unpublished until the third series showed why they matter. **The published third series
+tests the phase law only at the ends of the control's range** — 45°, the clamped low settings, and
+354.375°. **270° appears nowhere else**, and here it appears three times over, once per crossover
+state. Against a law fitted to the other settings it lands at **3109.3 / 3108.8 / 3105.3 Hz** where
+3107.3 is predicted, with Q = 1.0000 / 0.9997 / 1.0005 — so the model holds in the middle of the
+range and not only at its edges.
+
+Two things to know before reading numbers off the `lp5000` block. Its low-pass removes everything
+above 5 kHz, so the fit runs over 200–4500 Hz only: the **90° and 180° corners there (7900 and
+4969 Hz) are extrapolations, not evidence of a shift**, while the 270° corner sits inside the
+fitted band and agrees with the other blocks to 0.06 %. And the `hp500` block's residuals are four
+times the other two (0.35° against 0.08°) because its high-pass costs low-frequency signal-to-noise.
+
+`phase-turns-bypassed-ph0-control-5h` is **not a reference** — do not divide anything by it. It is
+the same bypassed state captured 5.5 hours earlier the same day, published so the bench's own drift
+over a session is a number rather than a claim: against `phase-turns-bypassed-ph0` it differs by
+**0.0001 dB mean and 0.0043 dB rms**.

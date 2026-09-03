@@ -1,0 +1,172 @@
+{
+  "set": "helix-dsp-ultra-s-phase-turns-2026-09-01",
+  "device": "Audiotec-Fischer Helix DSP Ultra S, output layer, 96 kHz",
+  "rig": "ELECTRICAL loop, no microphone: Scarlett 2i2 out L -> Helix line in, Helix line out -> Scarlett in 1; out R -> in 2 direct as the timing reference, timing offset 0. Everything else in the channel off; no gain, level or routing changed within a set, so the ratio to the set's reference is the filter alone.",
+  "grid": {
+    "spacing": "1/96 octave anchored at 20 Hz",
+    "first_hz": 20.0,
+    "last_hz": 19896.9742,
+    "points": 957
+  },
+  "columns": [
+    "frequency_Hz",
+    "dB",
+    "phase_deg"
+  ],
+  "levels": "REW electrical dB; only ratios within a set carry meaning",
+  "resampling": "REW raw unsmoothed spectrum (linear bins), complex-averaged into each 1/96-octave cell with the measurement's own delay removed before averaging and restored after",
+  "sets": {
+    "phase-turns-bypassed-*": "phase-turns-bypassed-ph0",
+    "phase-turns-hp500-*": "phase-turns-hp500-ph0",
+    "phase-turns-lp5000-*": "phase-turns-lp5000-ph0"
+  },
+  "files": [
+    {
+      "file": "phase-turns-bypassed-ph0.txt",
+      "rew_id": 30,
+      "rew_title": "v0_bypass",
+      "uuid": "1598d621-327e-487e-98f4-e5e3b5b97990",
+      "date": "2026-Sep-01 17:27:08",
+      "snr_db": 45.33,
+      "delay_ms": 0.3971,
+      "what": "phase control at 0 - the block's reference; both crossovers BYPASSED. subwoofer channel with the high-pass configured at 500 Hz and the low-pass at 5000 Hz throughout; only which of them is ENABLED changes between the three blocks",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-bypassed-ph90.txt",
+      "rew_id": 31,
+      "rew_title": "v0_bypass phase=90deg",
+      "uuid": "c903150e-0f09-4d22-a17a-78e87061f89a",
+      "date": "2026-Sep-01 17:27:31",
+      "snr_db": 45.38,
+      "delay_ms": 0.4297,
+      "what": "phase control at 90 deg, both crossovers bypassed",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-bypassed-ph180.txt",
+      "rew_id": 32,
+      "rew_title": "v0_bypass phase=180deg",
+      "uuid": "3276964b-e248-4b7b-b5a4-22b5c6139372",
+      "date": "2026-Sep-01 17:27:50",
+      "snr_db": 45.37,
+      "delay_ms": 0.4139,
+      "what": "phase control at 180 deg, both crossovers bypassed",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-bypassed-ph270.txt",
+      "rew_id": 33,
+      "rew_title": "v0_bypass phase=270deg",
+      "uuid": "77736aa1-646b-44bc-810b-feff0485f265",
+      "date": "2026-Sep-01 17:28:13",
+      "snr_db": 45.4,
+      "delay_ms": 0.4149,
+      "what": "phase control at 270 deg, both crossovers bypassed",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-hp500-ph0.txt",
+      "rew_id": 34,
+      "rew_title": "v0 HP=500 phase=0deg",
+      "uuid": "abc66ba7-a152-4f77-8443-39a5b2cc0705",
+      "date": "2026-Sep-01 17:28:38",
+      "snr_db": 45.31,
+      "delay_ms": 0.3966,
+      "what": "phase control at 0 - the block's reference; high-pass ACTIVE at 500 Hz, low-pass bypassed",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-hp500-ph90.txt",
+      "rew_id": 35,
+      "rew_title": "v0 HP=500 phase=90deg",
+      "uuid": "3baeef8b-9500-4010-b84e-c4fa5505448b",
+      "date": "2026-Sep-01 17:28:58",
+      "snr_db": 45.2,
+      "delay_ms": 0.4121,
+      "what": "phase control at 90 deg, high-pass active at 500 Hz",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-hp500-ph180.txt",
+      "rew_id": 36,
+      "rew_title": "v0 HP=500 phase=180deg",
+      "uuid": "28f938bc-1f86-40e4-aace-8d10b0569ad0",
+      "date": "2026-Sep-01 17:29:21",
+      "snr_db": 45.35,
+      "delay_ms": 0.4137,
+      "what": "phase control at 180 deg, high-pass active at 500 Hz",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-hp500-ph270.txt",
+      "rew_id": 37,
+      "rew_title": "v0 HP=500 phase=270deg",
+      "uuid": "cb46b8be-d6d0-497f-bc21-739b37611eeb",
+      "date": "2026-Sep-01 17:29:50",
+      "snr_db": 45.28,
+      "delay_ms": 0.4145,
+      "what": "phase control at 270 deg, high-pass active at 500 Hz",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-lp5000-ph0.txt",
+      "rew_id": 38,
+      "rew_title": "v0 LP=5000 phase=0deg",
+      "uuid": "cd066e88-e359-46d3-8b80-123b488442b8",
+      "date": "2026-Sep-01 17:30:37",
+      "snr_db": 36.42,
+      "delay_ms": 0.4838,
+      "what": "phase control at 0 - the block's reference; low-pass ACTIVE at 5000 Hz, high-pass bypassed",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-lp5000-ph90.txt",
+      "rew_id": 39,
+      "rew_title": "v0 LP=5000 phase=90deg",
+      "uuid": "9b91ce32-d899-431e-8f82-6b167d0c5c43",
+      "date": "2026-Sep-01 17:31:06",
+      "snr_db": 35.63,
+      "delay_ms": 0.537,
+      "what": "phase control at 90 deg, low-pass active at 5000 Hz",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-lp5000-ph180.txt",
+      "rew_id": 40,
+      "rew_title": "v0 LP=5000 phase=180deg",
+      "uuid": "b38c2020-b8e7-409e-86bc-8bae282499e6",
+      "date": "2026-Sep-01 17:31:36",
+      "snr_db": 35.61,
+      "delay_ms": 0.5782,
+      "what": "phase control at 180 deg, low-pass active at 5000 Hz",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-lp5000-ph270.txt",
+      "rew_id": 41,
+      "rew_title": "v0 LP=5000 phase=270deg",
+      "uuid": "901ca312-da3b-43b4-9eba-1ed51d54dc91",
+      "date": "2026-Sep-01 17:32:07",
+      "snr_db": 35.61,
+      "delay_ms": 0.6328,
+      "what": "phase control at 270 deg, low-pass active at 5000 Hz",
+      "caveats": []
+    },
+    {
+      "file": "phase-turns-bypassed-ph0-control-5h.txt",
+      "rew_id": 22,
+      "rew_title": "v0_bypass",
+      "uuid": "f65e553f-c9f3-4f5a-9cc3-c77191301ab1",
+      "date": "2026-Sep-01 12:00:00",
+      "snr_db": 45.4,
+      "delay_ms": 0.4039,
+      "what": "the same bypassed state captured 5.5 hours EARLIER the same day - a repeatability control, not a reference: do not divide the blocks above by it",
+      "caveats": [
+        "Published to document what the bench's own drift is over a session, not to be used as a reference. Against phase-turns-bypassed-ph0 it differs by 0.013 dB rms, and by 0.081 deg rms once a 6.9 us time-base slip is removed."
+      ]
+    }
+  ],
+  "note": "The 0/90/180/270 phase series captured 2026-09-01, published 2026-09-03 after the third series showed the law only at the ends of the range. Kept one level above measurements/ because every .json inside it must be a Resonalyze IR file (tools/check.py).",
+  "written_by": "research/experiments/code/xover-model-form/export-bench3.py"
+}
