@@ -1,0 +1,61 @@
+{
+  "set": "helix-dsp-ultra-s-bw24-460-2026-09-04",
+  "device": "Audiotec-Fischer Helix DSP Ultra S, output layer, 96 kHz",
+  "question": "does the processor's Butterworth 24 dB/oct match the model in Resonalyze's CrossoverFilter.cs (two RBJ biquads, Q = 1.3066 and 0.5412, high-pass sharing the low-pass denominator)",
+  "rig": "ELECTRICAL loop, no microphone: Scarlett 2i2 out L -> Helix line in, Helix line out -> Scarlett in 1; out R -> in 2 direct as the timing reference, timing offset 0. A spare output, not one the working tune uses, so the channel is configured from scratch; nothing but the crossover changed within the set, so the ratio to the set's reference is the filter alone.",
+  "crossover_hz": 460,
+  "why_460": "the frequency the working preset uses on the mids, not a synthetic round number - so the check lands where the tune actually sits",
+  "grid": {
+    "spacing": "1/96 octave anchored at 20 Hz",
+    "first_hz": 20.0,
+    "last_hz": 19896.9742,
+    "points": 957
+  },
+  "columns": [
+    "frequency_Hz",
+    "dB",
+    "phase_deg"
+  ],
+  "levels": "REW electrical dB; only ratios within a set carry meaning",
+  "resampling": "REW raw unsmoothed spectrum (linear bins), complex-averaged into each 1/96-octave cell with the measurement's own delay removed before averaging and restored after",
+  "reference": "bw24-460-bypass.txt",
+  "provenance": "captured and exported by the research session (ayukhno/autosound-research, commit 92e83ab, datasets/rew/bw24-460-2026-09-04); resample() and grid() imported from this project's own export-bench3.py, not reimplemented, so the files land on the same grid as every other set here. Copied in verbatim.",
+  "files": [
+    {
+      "file": "bw24-460-bypass.txt",
+      "rew_id": 99,
+      "rew_title": "bw24-460-bypass",
+      "uuid": "6ebf73b4-7177-4f28-960c-cce6b6a264a3",
+      "date": "2026-Sep-04 09:30:18",
+      "snr_db": 44.56,
+      "what": "crossover configured at 460 Hz and BYPASSED - the set's reference"
+    },
+    {
+      "file": "bw24-460-hp.txt",
+      "rew_id": 100,
+      "rew_title": "bw24-460-hp",
+      "uuid": "0938619d-97a6-4efa-90bc-212653438740",
+      "date": "2026-Sep-04 09:30:33",
+      "snr_db": 44.57,
+      "what": "high-pass 460 Hz, Butterworth 24 dB/oct - the filter under test"
+    },
+    {
+      "file": "lr24-460-hp.txt",
+      "rew_id": 101,
+      "rew_title": "lr24-460-hp",
+      "uuid": "9b6032dd-1b2b-4e5a-b9cd-ac3362fa590d",
+      "date": "2026-Sep-04 09:30:52",
+      "snr_db": 44.55,
+      "what": "high-pass 460 Hz, Linkwitz-Riley 24 dB/oct - the control. LR24 is verified separately against the model at 1 kHz (fact 8), so it says whether the rig and the model code are sound before the Butterworth number is read"
+    },
+    {
+      "file": "bw24-460-bypass-ctl.txt",
+      "rew_id": 102,
+      "rew_title": "bw24-460-bypass-ctl",
+      "uuid": "cc4e3274-746c-4825-be71-4a8db2331af6",
+      "date": "2026-Sep-04 09:31:12",
+      "snr_db": 44.57,
+      "what": "the reference again at the end of the pass - drift over the four sweeps"
+    }
+  ]
+}

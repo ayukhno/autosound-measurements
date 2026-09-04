@@ -154,3 +154,63 @@ times the other two (0.35° against 0.08°) because its high-pass costs low-freq
 the same bypassed state captured 5.5 hours earlier the same day, published so the bench's own drift
 over a session is a number rather than a claim: against `phase-turns-bypassed-ph0` it differs by
 **0.0001 dB mean and 0.0043 dB rms**.
+
+---
+
+## Butterworth 24 dB/oct at 460 Hz, captured 2026-09-04
+
+`bw24-460-{bypass,hp,bypass-ctl}` and `lr24-460-hp` — four sweeps in one 54-second pass, listed in
+`../bw24-manifest.json`. They close the last open member of the crossover family: every earlier set
+checked a Linkwitz-Riley (12, 24, 36), an odd-order Butterworth (42) or a Bessel (36), so no
+**even-order Butterworth** had ever been measured, and BW24 is the one most tunes actually use.
+
+Two things about how this set was built are worth copying next time.
+
+**The frequency is 460 Hz because that is what the preset runs on the mids**, not a round number
+chosen for the test. A model that matches at a synthetic 1 kHz and is used at 460 has not been
+checked where it is used.
+
+**The control is the point.** LR24 was measured in the same pass, at the same frequency, between the
+two references — and LR24 is already verified against the model at 1 kHz (fact 8). So the set
+answers with a *difference*: BW24 sits **−0.0024 dB and +0.034°** from where the known-good
+alignment sits relative to its own model. That statement survives changes to the band, the mask and
+the grid; the absolute residual does not.
+
+| | repeat, `bypass` vs `bypass-ctl` | LR24 control | BW24 |
+|---|---|---|---|
+| REW's raw linear bins | 0.0078 dB · 0.058° | 0.0341 · 0.212° | 0.0327 · 0.224° |
+| the published 1/96-oct grid | 0.0040 dB · 0.035° | 0.0622 · 0.409° | 0.0598 · 0.443° |
+
+−3 dB at the corner: **−2.985** on these files, against −3.010 from the model.
+
+### Why the two rows differ by a factor of two, and what it means for every other number here
+
+The grid row is worse than the raw-bin row for both families at once, which already says the cause
+is the arithmetic and not the filter. It is **the weighting**, not the resampling:
+
+* re-averaging the *model* through the same 1/96 cells before comparing moves the number by
+  **0.003°** — so cell-averaging is not smearing anything that matters here;
+* re-weighting the *identical per-bin residual* by linear bin density (∝ f, which is what a linear
+  grid does to a log cell) turns **0.443° into 0.220°** — the raw bins' 0.224°.
+
+The residual is not at the knee. Per octave it runs **1.7° at 100–230 Hz, 0.76° at 230–460, 0.29° at
+460–920, 0.04–0.08° above 920** — it lives in the deep stopband at the mask edge, where the leg is
+25 dB down and the signal-to-noise is worst. A linear grid has almost no points down there; a
+1/96-octave grid has ninety-six per octave. Moving the mask shows the same thing from the other
+side: −40 dB gives 2.0°, −25 gives 0.44, −10 gives 0.10 — and the BW24-minus-control difference
+stays within 0.11° across all of them.
+
+This cuts the other way from the cascade set in the third series, where the grid *improved* the
+number (0.045 dB raw → 0.015 on the grid). There the residual was broadband noise, which cell
+averaging reduces; here it is a stopband floor, which log weighting exposes. Both are real, and
+which one wins depends on where the residual sits — so **a residual quoted without its band, mask
+and grid is not comparable to another one**, and `FACTS.md` now says so in its header.
+
+### Provenance
+
+Captured and exported by the research session (`ayukhno/autosound-research`, commit `92e83ab`,
+`datasets/rew/bw24-460-2026-09-04`), using this project's own `export-bench3.py` `resample()` and
+`grid()` rather than a reimplementation, so the files land on the identical 957-point grid and were
+copied in unchanged. The numbers in the table were re-derived here from the published files with
+independent code; they reproduce to the last printed digit. The finding about weighting is this
+repo's, and corrects the explanation offered with the data.
