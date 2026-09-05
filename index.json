@@ -130,6 +130,42 @@
    ],
    "note": "Magnitude only — no phase, no impulse response. Level verification, not timing.",
    "license": "CC-BY-4.0"
+  },
+  {
+   "id": "vw-passat-b8-sedan-lhd/2026-09-03_two-ear-stage",
+   "car": "vw-passat-b8-sedan-lhd",
+   "carDoc": "cars/vw-passat-b8-sedan-lhd/CAR.md",
+   "session": "2026-09-03",
+   "path": "cars/vw-passat-b8-sedan-lhd/2026-09-03_two-ear-stage",
+   "kind": "two-ear-stage-control",
+   "channels": [
+    "sum_L",
+    "sum_R"
+   ],
+   "sampleRate": 96000,
+   "timingReference": "loopback",
+   "formats": [
+    "rew-mdat",
+    "analysis-json"
+   ],
+   "processor": "Helix DSP Ultra S",
+   "mic": "mics/behringer-ecm8000",
+   "micMounting": "tripod, two microphone positions at ear locations (±9 cm) repeated at three heights (±7 cm); no manikin",
+   "protectiveHighPass": {
+    "m_L": "100:LR:24",
+    "m_R": "100:LR:24",
+    "tw_L": "1000:LR:24",
+    "tw_R": "1000:LR:24"
+   },
+   "dspStates": [
+    "_57 raw baseline",
+    "_58 tuned SQ preset"
+   ],
+   "measuredBy": [
+    "REW 5.40 (published here as the raw session)"
+   ],
+   "note": "A question, not a tune: can a per-channel DSP steer interaural cues? The prediction was registered before the listening and refuted by ear. Published raw because the question is about PAIRS of positions.",
+   "license": "CC-BY-4.0"
   }
  ],
  "hardware": [

@@ -1,0 +1,101 @@
+{
+ "tolerance_us": 60.0,
+ "median_abs_delta_us": 9.1,
+ "worst_abs_delta_us": 74.2,
+ "passed": true,
+ "estimator": "смугова взаємна кореляція з межею ±525 мкс (та сама, що в selftest)",
+ "bands": [
+  {
+   "band": "низ 300-800",
+   "hz": [
+    300,
+    800
+   ],
+   "L": {
+    "pred_us": 233.7,
+    "meas_us": 244.8,
+    "delta_us": 11.1,
+    "rho_pred": 0.884,
+    "rho_meas": 0.901,
+    "railed": false
+   },
+   "R": {
+    "pred_us": -493.8,
+    "meas_us": -504.0,
+    "delta_us": -10.2,
+    "rho_pred": 0.46,
+    "rho_meas": 0.523,
+    "railed": false
+   }
+  },
+  {
+   "band": "серед 800-2k",
+   "hz": [
+    800,
+    2000
+   ],
+   "L": {
+    "pred_us": 328.3,
+    "meas_us": 326.3,
+    "delta_us": -2.1,
+    "rho_pred": 0.481,
+    "rho_meas": 0.531,
+    "railed": false
+   },
+   "R": {
+    "pred_us": 416.7,
+    "meas_us": 412.6,
+    "delta_us": -4.1,
+    "rho_pred": 0.461,
+    "rho_meas": 0.479,
+    "railed": false
+   }
+  },
+  {
+   "band": "верх 2-5k",
+   "hz": [
+    2000,
+    5000
+   ],
+   "L": {
+    "pred_us": 169.1,
+    "meas_us": 161.2,
+    "delta_us": -8.0,
+    "rho_pred": 0.864,
+    "rho_meas": 0.857,
+    "railed": false
+   },
+   "R": {
+    "pred_us": -446.7,
+    "meas_us": -520.8,
+    "delta_us": -74.2,
+    "rho_pred": 0.852,
+    "rho_meas": 0.833,
+    "railed": true
+   }
+  },
+  {
+   "band": "най 5-10k",
+   "hz": [
+    5000,
+    10000
+   ],
+   "L": {
+    "pred_us": 270.6,
+    "meas_us": 275.8,
+    "delta_us": 5.2,
+    "rho_pred": 0.909,
+    "rho_meas": 0.878,
+    "railed": false
+   },
+   "R": {
+    "pred_us": -500.3,
+    "meas_us": -482.3,
+    "delta_us": 18.0,
+    "rho_pred": 0.857,
+    "rho_meas": 0.86,
+    "railed": false
+   }
+  }
+ ]
+}

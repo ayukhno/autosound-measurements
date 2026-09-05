@@ -3,3 +3,12 @@ __pycache__/
 .DS_Store
 *.mdat
 *.tmp
+
+# ...except one. A REW session is normally an INPUT to this repository (CONTRIBUTING.md:
+# "send either the .mdat or the converted set"), not something published from it — the
+# published formats are tool-neutral and diffable. The 2026-09-03 two-ear set is the
+# exception on purpose: its question is about PAIRS of microphone positions, and the
+# per-driver conversion every other set uses throws the pairing away, so the raw session
+# is the only form in which that result can be re-derived. Widen this only for the same
+# reason, and say the reason here.
+!cars/vw-passat-b8-sedan-lhd/2026-09-03_two-ear-stage/stereobasis_research.mdat

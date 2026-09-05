@@ -1,0 +1,47 @@
+{
+ "set": "vw-passat-b8-sedan-lhd/2026-09-03_two-ear-stage",
+ "kind": "two-ear-stage-control",
+ "question": "can a per-channel DSP steer the interaural cues a listener uses to place a stereo image?",
+ "answer": "no, above about 500 Hz - and the prediction that said otherwise was registered before the listening and refuted by ear. See NOTE-to-resonalyze-author.md",
+ "createdAtUtc": "2026-09-05T07:40:00+00:00",
+ "capturedOn": ["2026-09-03", "2026-09-04"],
+ "car": "vw-passat-b8-sedan-lhd",
+ "carDoc": "cars/vw-passat-b8-sedan-lhd/CAR.md",
+ "processor": "Helix DSP Ultra S",
+ "sampleRate": 96000,
+ "timingReference": "loopback",
+ "mic": "mics/behringer-ecm8000",
+ "micMounting": "tripod, never moved; a plus/minus 45 degree arm carrying TWO microphone positions at ear locations (plus/minus 9 cm from the head centre), the pair repeated at three heights (plus/minus 7 cm). NO MANIKIN - two bare capsules, no head, no pinnae, so an interaural level difference here is cabin interference between two points 18 cm apart, not head shadow plus pinna filtering",
+ "signConvention": "positive = toward the RIGHT",
+ "dspStates": {
+  "_57": "RAW baseline - all delays 0, crossovers off, EQ bypassed, protective high-passes only",
+  "_58": "per-side sums on the tuned SQ preset"
+ },
+ "protectiveHighPass": {
+  "m_L": "100:LR:24",
+  "m_R": "100:LR:24",
+  "tw_L": "1000:LR:24",
+  "tw_R": "1000:LR:24"
+ },
+ "formats": ["rew-mdat", "analysis-json", "markdown"],
+ "session": {
+  "file": "stereobasis_research.mdat",
+  "inSessionName": "дослідження стереобази.mdat",
+  "sha256": "e3bc1bf572cbe4dad2a05beeb1d0a036ac09414dcd6cd3221f3846e74b4ae8fc",
+  "bytes": 25819616,
+  "captures": 20,
+  "needs": "REW 5.40 or newer; the per-capture list is inside the session",
+  "note": "published raw rather than converted to ir-v7: the question is about PAIRS of positions, and the per-driver conversion the other sets use throws the pairing away"
+ },
+ "derived": {
+  "criterion3-itd.json": "acceptance criterion, time: predicted against measured per band per ear, tolerance 60 us, median |delta| 9.1 us - PASSED",
+  "criterion3-ild.json": "acceptance criterion, level: tolerance 1.0 dB, median |delta| 0.39 dB - PASSED",
+  "stage-picture-SQ.json": "band-by-band stage picture on the tuned preset",
+  "sigma-vs-band.png": "spread of the summed cues across ear positions, by band; drawn by plot_sigma.py",
+  "PREREG-vfr420-listening.md": "the pre-registration and its verdict, English with the Ukrainian original verbatim",
+  "NOTE-to-resonalyze-author.md": "the finding as sent to the author of Resonalyze"
+ },
+ "cyrillicLabels": "a few label strings inside the JSON files are Ukrainian; README.md carries the full key",
+ "limits": "one car, one seating position, one listener, one evening. Between-session rig repeatability was never measured - the arm was dismantled. The sigma figures come from three ear pairs, which is a weak sigma.",
+ "license": "CC-BY-4.0"
+}

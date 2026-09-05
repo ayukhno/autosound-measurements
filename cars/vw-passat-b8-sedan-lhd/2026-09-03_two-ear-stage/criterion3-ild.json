@@ -1,0 +1,204 @@
+{
+ "tolerance_db": 1.0,
+ "median_abs_delta_db": 0.39,
+ "worst_abs_delta_db": 2.09,
+ "passed": true,
+ "bands": [
+  {
+   "fc": 315,
+   "L": {
+    "pred_db": -2.35,
+    "meas_db": -2.37,
+    "delta_db": -0.01
+   },
+   "R": {
+    "pred_db": 3.7,
+    "meas_db": 3.92,
+    "delta_db": 0.22
+   }
+  },
+  {
+   "fc": 400,
+   "L": {
+    "pred_db": -2.42,
+    "meas_db": -2.42,
+    "delta_db": 0.01
+   },
+   "R": {
+    "pred_db": 6.84,
+    "meas_db": 6.37,
+    "delta_db": -0.48
+   }
+  },
+  {
+   "fc": 500,
+   "L": {
+    "pred_db": -1.51,
+    "meas_db": -1.47,
+    "delta_db": 0.04
+   },
+   "R": {
+    "pred_db": 10.51,
+    "meas_db": 11.14,
+    "delta_db": 0.63
+   }
+  },
+  {
+   "fc": 630,
+   "L": {
+    "pred_db": -1.68,
+    "meas_db": -1.73,
+    "delta_db": -0.04
+   },
+   "R": {
+    "pred_db": -7.65,
+    "meas_db": -7.15,
+    "delta_db": 0.5
+   }
+  },
+  {
+   "fc": 800,
+   "L": {
+    "pred_db": 0.25,
+    "meas_db": 0.25,
+    "delta_db": -0.0
+   },
+   "R": {
+    "pred_db": -2.17,
+    "meas_db": -2.17,
+    "delta_db": -0.0
+   }
+  },
+  {
+   "fc": 1000,
+   "L": {
+    "pred_db": -2.43,
+    "meas_db": -2.31,
+    "delta_db": 0.13
+   },
+   "R": {
+    "pred_db": -4.43,
+    "meas_db": -4.65,
+    "delta_db": -0.22
+   }
+  },
+  {
+   "fc": 1250,
+   "L": {
+    "pred_db": -3.12,
+    "meas_db": -3.06,
+    "delta_db": 0.06
+   },
+   "R": {
+    "pred_db": 1.19,
+    "meas_db": 3.01,
+    "delta_db": 1.82
+   }
+  },
+  {
+   "fc": 1600,
+   "L": {
+    "pred_db": 2.53,
+    "meas_db": 2.95,
+    "delta_db": 0.42
+   },
+   "R": {
+    "pred_db": -3.61,
+    "meas_db": -4.11,
+    "delta_db": -0.5
+   }
+  },
+  {
+   "fc": 2000,
+   "L": {
+    "pred_db": 0.61,
+    "meas_db": 0.57,
+    "delta_db": -0.04
+   },
+   "R": {
+    "pred_db": -4.66,
+    "meas_db": -4.81,
+    "delta_db": -0.15
+   }
+  },
+  {
+   "fc": 2500,
+   "L": {
+    "pred_db": 6.56,
+    "meas_db": 6.49,
+    "delta_db": -0.07
+   },
+   "R": {
+    "pred_db": -0.93,
+    "meas_db": -0.54,
+    "delta_db": 0.39
+   }
+  },
+  {
+   "fc": 3150,
+   "L": {
+    "pred_db": -4.98,
+    "meas_db": -4.25,
+    "delta_db": 0.72
+   },
+   "R": {
+    "pred_db": -5.67,
+    "meas_db": -5.17,
+    "delta_db": 0.5
+   }
+  },
+  {
+   "fc": 4000,
+   "L": {
+    "pred_db": -7.22,
+    "meas_db": -7.13,
+    "delta_db": 0.09
+   },
+   "R": {
+    "pred_db": 0.28,
+    "meas_db": -0.11,
+    "delta_db": -0.39
+   }
+  },
+  {
+   "fc": 5000,
+   "L": {
+    "pred_db": 1.31,
+    "meas_db": 0.33,
+    "delta_db": -0.98
+   },
+   "R": {
+    "pred_db": -1.32,
+    "meas_db": 0.77,
+    "delta_db": 2.09
+   }
+  },
+  {
+   "fc": 6300,
+   "L": {
+    "pred_db": 2.34,
+    "meas_db": 3.19,
+    "delta_db": 0.85
+   },
+   "R": {
+    "pred_db": -0.29,
+    "meas_db": 1.09,
+    "delta_db": 1.38
+   }
+  },
+  {
+   "fc": 8000,
+   "L": {
+    "pred_db": 3.54,
+    "meas_db": 3.91,
+    "delta_db": 0.38
+   },
+   "R": {
+    "pred_db": -0.42,
+    "meas_db": -0.97,
+    "delta_db": -0.55
+   }
+  }
+ ],
+ "note": "ILD імунний до віртуального шару: VFL/VFR множать обидва вуха однаково"
+}
