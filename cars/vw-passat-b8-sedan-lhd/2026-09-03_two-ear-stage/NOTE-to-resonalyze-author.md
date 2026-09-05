@@ -7,9 +7,12 @@ One car (VW Passat B8), one listener, two measurement days: 2026-09-03 and 2026-
 deliberately one paragraph long. The measurement is worth more than our interpretation
 of it, and we would rather hear yours before you hear ours.
 
+**If you read only one other section, make it §10** — we ran this analysis on *your* `v8`
+set, and the result has the same shape in your cabin as in ours.
+
 Nothing here asks anything of you, except the one question in §9. If it is useful, it is
 yours: everything a claim below rests on — including the raw REW session and the
-pre-registration — is published under CC BY 4.0 next to this file (§11), so you can check
+pre-registration — is published under CC BY 4.0 next to this file (§12), so you can check
 it rather than take our word.
 
 ---
@@ -230,7 +233,9 @@ listener, one evening" is exactly the shape of a result that later turns out to 
   on the same points. The quantity is unstable, not its computation.
 * **Not that time alignment is affected.** Broadband TA changes *relative* time between
   drivers and remains a working tool. This is about interaural cues only.
-* **Not a general result.** One car, one seating position, one listener, one evening.
+* **Not a general result.** One car, one seating position, one listener, one evening —
+  with the partial exception of §10, where the same shape appears in your BMW `v8` set.
+  Two cabins is two.
 
 ## 8. Known holes in this, named by us
 
@@ -277,7 +282,56 @@ your opinion on.
 
 ---
 
-## 10. If it is a reading instrument, this is its specification
+## 10. A second cabin — and it is yours
+
+The obvious objection to everything above is "one car". While writing this we realised you
+had already published the data that answers it, and we ran our analysis on **your** set
+rather than asking you to run ours.
+
+`Resonalyze-test-data` **`v8`**: the BMW F30, left midrange swept solo while one microphone
+was carried through seven positions — centre, L / LF / LFF, R / RF / RFF — the sides 10 cm
+either way, the forward pairs adding 10 and 20 cm. So **(L,R), (LF,RF), (LFF,RFF) are three
+pairs 20 cm apart, the pair translated forward.** That is the same shape as our three ear
+heights: one driver, one interaural cue, the pair moved by a head's worth of distance.
+
+Loopback-referenced on one time base, so nothing is fitted. Band-limited cross-correlation
+with a ±583 µs limit — the physical maximum for 20 cm — and band energy for the level:
+
+| band | ITD per pair, 0 / +10 / +20 cm | σ | ILD per pair | σ |
+|---|---|---|---|---|
+| 500 Hz | −302 / −417 / −240 µs | **90 µs** | +0.29 / +2.15 / +3.24 dB | **1.49 dB** |
+| 1 kHz | −260 / *railed* / −198 µs | 44 µs | −2.14 / +3.64 / +1.87 dB | 2.96 dB |
+| 2 kHz | −146 / +135 / −271 µs | 208 µs | +3.70 / +1.30 / −2.36 dB | 3.05 dB |
+| 3.15 kHz | *railed* / −188 / −323 µs | 96 µs | +1.61 / +0.54 / −2.17 dB | 1.95 dB |
+| 5 kHz | *railed* / +292 / −83 µs | 265 µs | −1.05 / +0.27 / +1.86 dB | 1.46 dB |
+
+*railed* means |ITD| hit the ±583 µs limit — beyond the geometry, so it is interference
+between the two points and not an arrival difference at all. Those are excluded from σ
+rather than averaged in.
+
+**Your own closing repeat sets the noise floor**, which is why we can read the spread as
+real: the opening and closing centre sweeps of the same position differ by **10–21 µs and
+0.12–0.41 dB** across all five bands.
+
+What we read in it, and you may read differently:
+
+* **500 Hz behaves like our 500 Hz** — the only band where neither cue changes sign across
+  the three pairs;
+* **above it, the level cue changes sign** in four of five bands, and the delay in three;
+* the top two bands rail out of geometry entirely at the widest pair, which is the same
+  thing our `stage-picture-SQ.json` marks as "interference, not arrival".
+
+So the shape reproduces in a different cabin, a different car, a different rig and a
+different measurement program from ours. It does **not** make the conclusion general — two
+cabins is two — but it does mean the objection we most expected is already partly answered
+by your own data, and you can re-run this in minutes.
+
+The `tw` half of `v8` would extend it above 5 kHz and we did not download it; that check is
+yours if you want it.
+
+---
+
+## 11. If it is a reading instrument, this is its specification
 
 Section 6 says "a reading instrument and not a control surface", which reads as a loss. It
 is not one — it is a specification, and we happen to have measured the numbers that go in
@@ -308,7 +362,7 @@ the σ table is measurement.
 
 ---
 
-## 11. Everything behind these numbers, published
+## 12. Everything behind these numbers, published
 
 Rather than offer files on request, they are published — **CC BY 4.0**, in the same
 repository whose cabin sets you already read:
@@ -318,7 +372,7 @@ repository whose cabin sets you already read:
 |---|---|
 | `PREREG-vfr420-listening.md` | **the pre-registration** — §4's prediction and its refutation criteria as written before the listening, the verdict of §5 appended, and the Ukrainian original reproduced verbatim so the translation can be checked |
 | `criterion3-itd.json`, `criterion3-ild.json` | the acceptance criteria of §1, machine-readable: predicted against measured, per band, per ear |
-| `stage-picture-SQ.json` | the band-by-band stage picture of §10 on the tuned preset |
+| `stage-picture-SQ.json` | the band-by-band stage picture of §11 on the tuned preset |
 | `stereobasis_research.mdat` | **the raw REW session**, 24.6 MB, 20 captures — sha256 `e3bc1bf5…`, the same file §1 names. Open it and re-derive anything here |
 | `sigma-vs-band.png`, `plot_sigma.py` | the chart in §2 and the script that draws it |
 | `README.md` | the rig, the sign convention, and a key to the handful of Ukrainian label strings inside the JSON |
