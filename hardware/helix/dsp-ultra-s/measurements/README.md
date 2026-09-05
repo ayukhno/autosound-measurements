@@ -107,9 +107,17 @@ These are in the data. Each one is also flagged in the header of the file it aff
    available, **provided the reference is taken in the same state**. Had the mistake landed
    between a reference and its captures, the set would have been lost.
 2. **A 1.00 dB level step happened part way through sweep #49**, `phase-slopeoff-lp5000-ph0`. A
-   sweep is a time-frequency map, so that file is 1 dB low above about 1.2 kHz and correct below
-   it. Phase is untouched — the all-pass fit against it is 0.15° rms — but magnitude ratios into
-   that group are not usable without correcting the step.
+   sweep is a time-frequency map, so the step lands at a frequency: the level went **up** by
+   1.002 dB at **898 Hz** (10 % to 90 % over 879–919 Hz, 0.06 octave), and the file is at the
+   session's **earlier, 1 dB lower** level below that and at the later level above it. The
+   session's own captures bracket it: everything before it sits at 108.42 dB and everything
+   after at 109.43, and this one file holds both. Phase is untouched, and that is not an
+   assumption — adding the minimum-phase counterpart of the step to the model makes the fit
+   **ten times worse** (0.188° rms → 1.770° over 100 Hz–15 kHz), so the step carries no phase
+   and the all-pass conclusions from this pair stand. Magnitude ratios into this group are not
+   usable without correcting the step.
+   *(Corrected 2026-09-05: this note previously said "1 dB low above about 1.2 kHz and correct
+   below it", which has both the direction and the frequency wrong.)*
 3. **`cascade-lr24-bypass-disturbed` is a bad capture**, and ratios against it are wrong by up to
    10 dB. **In this file the tell is the level**: 27 bins sit more than 5 dB below its own median,
    with holes at 55, 135 and 315 Hz (102.1, 102.9 and 99.4 dB against 109.45 at 1 kHz, where the

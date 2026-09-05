@@ -121,7 +121,7 @@
       "delay_ms": -9.0175,
       "what": "phase control at 0 - the set's reference; LPF configured 5000 Hz with slope = OFF",
       "caveats": [
-        "The chain level stepped by exactly 1.00 dB PART WAY THROUGH this sweep, so this file is 1 dB low above about 1.2 kHz and correct below it. Phase is unaffected; magnitude ratios against it are not. See README."
+        "The chain level stepped UP by 1.002 dB PART WAY THROUGH this sweep, at 898 Hz. This file therefore holds the session's earlier level (108.42 dB) below 898 Hz and its later level (109.43 dB) above. Phase is unaffected - adding the minimum-phase counterpart of the step to the model makes the all-pass fit ten times worse, so the step carries none - but magnitude ratios against it are not usable without correcting it. See README."
       ]
     },
     {
@@ -134,7 +134,7 @@
       "delay_ms": -8.9981,
       "what": "phase control at 180 deg, LPF configured 5000 Hz with slope = OFF",
       "caveats": [
-        "Taken after the 1.00 dB level step described in phase-slopeoff-lp5000-ph0."
+        "Taken after the 1.002 dB level step described in phase-slopeoff-lp5000-ph0, so this file is at the later level (109.43 dB) throughout and is itself sound."
       ]
     },
     {
