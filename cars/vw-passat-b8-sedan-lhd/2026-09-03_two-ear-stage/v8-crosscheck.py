@@ -11,6 +11,18 @@ property of the construction rather than of our car, his data must show the same
 the interaural DELAY of one driver stable across the pairs, the interaural LEVEL not.
 
 Everything is loopback-referenced on one absolute time base, so no fitting anywhere.
+
+TO RUN IT: the data is not copied here - it is his, and it is 160 MB. Fetch the six
+sweeps plus the two centre repeats into a `v8/` directory next to this script:
+
+    mkdir -p v8 && cd v8
+    for f in "mid L" "mid R" "mid LF" "mid RF" "mid LFF" "mid RFF" \
+             "mid center" "mid center final"; do
+      curl -sL -o "${f// /_}.json" \
+        "https://raw.githubusercontent.com/DIMOSUS/Resonalyze-test-data/main/v8/${f// /%20}.json"
+    done
+
+Resonalyze-test-data is CC BY 4.0, by DIMOSUS.
 """
 import json, pathlib, numpy as np
 

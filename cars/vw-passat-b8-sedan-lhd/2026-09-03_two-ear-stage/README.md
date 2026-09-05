@@ -22,6 +22,7 @@ of this directory is what it stands on.
 | [`criterion3-itd.json`](criterion3-itd.json) · [`criterion3-ild.json`](criterion3-ild.json) | the acceptance criteria, machine-readable: predicted against measured, per band, per ear |
 | [`stage-picture-SQ.json`](stage-picture-SQ.json) | the band-by-band stage picture on the tuned preset |
 | [`sigma-vs-band.png`](sigma-vs-band.png) · [`plot_sigma.py`](plot_sigma.py) | the chart above and the script that draws it |
+| [`v8-crosscheck.py`](v8-crosscheck.py) | the same question asked of **somebody else's cabin** — Resonalyze's published `v8` set (BMW F30, one microphone carried through seven positions, CC BY 4.0). It fetches his data itself; the result is §10 of the note, and the short version is that the shape reproduces |
 | `stereobasis_research.mdat` | **the raw REW session**, 24.6 MB — 20 captures, needs REW 5.40+ to open. In-session name «дослідження стереобази.mdat»; sha256 `e3bc1bf572cbe4dad2a05beeb1d0a036ac09414dcd6cd3221f3846e74b4ae8fc` |
 
 There is no `ir-v7/` here: this set is published as the raw session plus the derived
